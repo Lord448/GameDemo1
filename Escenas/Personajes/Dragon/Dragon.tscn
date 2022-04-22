@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/Dragon_Sprites/dragon.png" type="Texture" id=1]
+[ext_resource path="res://Escenas/Personajes/Dragon/Dragon.gd" type="Script" id=2]
+[ext_resource path="res://Escenas/Personajes/Dragon/Portal.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 136, 81.125 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 161, 191, 161 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 191, 161, 191, 161 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 382, 161, 191, 161 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "volar",
+"speed": 7.0
+} ]
+
+[node name="Dragon" type="Node2D"]
+
+[node name="Dragon" type="KinematicBody2D" parent="."]
+position = Vector2( 107, 308 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dragon"]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Dragon"]
+scale = Vector2( 1.95288, 1.9441 )
+frames = SubResource( 5 )
+animation = "volar"
+frame = 1
+
+[node name="Portal" parent="Dragon" instance=ExtResource( 3 )]
+escena = "Level"
