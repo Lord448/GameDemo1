@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var limite
-var velocidad= 500
-var direccion= Vector2(0,0)
+var velocidad = 500
+var direccion = Vector2(0,0)
 var arriba=Vector2(0,-1)
 
 func _ready():
