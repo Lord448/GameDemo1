@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Demo1"
-run/main_scene="res://Escenas/Menus/Main_Menu/Main_Menu.tscn"
+run/main_scene="res://Escenas/Menus/Main_Menu.tscn"
 config/icon="res://icon.png"
 
 [physics]
