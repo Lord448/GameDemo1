@@ -36,7 +36,3 @@ position = Vector2( 435, 429 )
 frames = SubResource( 2 )
 animation = "caminar"
 centered = false
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 512, 301 )
-current = true

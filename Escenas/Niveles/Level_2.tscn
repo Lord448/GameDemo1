@@ -27,6 +27,18 @@ position = Vector2( 187, 237 )
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1, -300 )
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 509, 301 )
+current = true
+
+[node name="Label" type="Label" parent="Player/Camera2D"]
+margin_left = -493.0
+margin_top = -277.0
+margin_right = -371.0
+margin_bottom = -251.0
+custom_fonts/font = SubResource( 1 )
+text = "Level 2"
+
 [node name="Stage" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Stage"]
@@ -83,18 +95,3 @@ position = Vector2( 0, -303 )
 scale = Vector2( 0.533, 0.558333 )
 texture = ExtResource( 1 )
 centered = false
-
-[node name="Parallax_Name_Level" type="ParallaxBackground" parent="Stage"]
-layer = 1
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Stage/Parallax_Name_Level"]
-motion_scale = Vector2( 1, 0 )
-motion_mirroring = Vector2( 1023, 0 )
-
-[node name="Label" type="Label" parent="Stage/Parallax_Name_Level/ParallaxLayer"]
-margin_left = 15.0
-margin_top = -291.0
-margin_right = 135.0
-margin_bottom = -265.0
-custom_fonts/font = SubResource( 1 )
-text = "Level 2"

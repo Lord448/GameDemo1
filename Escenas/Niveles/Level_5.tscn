@@ -28,6 +28,18 @@ position = Vector2( 179, 279 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1, -300 )
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 511, 295 )
+current = true
+
+[node name="Label" type="Label" parent="Player/Camera2D"]
+margin_left = -497.0
+margin_top = -286.0
+margin_right = -375.0
+margin_bottom = -260.0
+custom_fonts/font = SubResource( 1 )
+text = "Level 5"
+
 [node name="Stage" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Stage"]
@@ -91,18 +103,3 @@ position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
 texture = ExtResource( 9 )
 centered = false
-
-[node name="Parallax_Name_Level" type="ParallaxBackground" parent="Stage"]
-layer = 1
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Stage/Parallax_Name_Level"]
-motion_scale = Vector2( 1, 0 )
-motion_mirroring = Vector2( 1023, 0 )
-
-[node name="Label" type="Label" parent="Stage/Parallax_Name_Level/ParallaxLayer"]
-margin_left = 15.0
-margin_top = -291.0
-margin_right = 135.0
-margin_bottom = -265.0
-custom_fonts/font = SubResource( 1 )
-text = "Level 5"
