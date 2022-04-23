@@ -1,0 +1,141 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Escenas/Personajes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas/Objetos/Moneda/Moneda_4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas/Personajes/Dragon/Dragon_4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/Niveles/Level_2.gd" type="Script" id=4]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer03_Clouds_3.png" type="Texture" id=5]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer01_Clouds_1.png" type="Texture" id=6]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer06_Stars_3.png" type="Texture" id=7]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer07_Stars_2.png" type="Texture" id=8]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer05_Castle.png" type="Texture" id=9]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer09_Sky.png" type="Texture" id=10]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer08_Stars_1.png" type="Texture" id=11]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer04_Path.png" type="Texture" id=12]
+[ext_resource path="res://Paisajes/Infantil/Infantil_2/Layers/layer02_Clouds_2.png" type="Texture" id=13]
+[ext_resource path="res://Fonts/Pixel.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 14 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Moneda_4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 860, -103 )
+
+[node name="Dragon_4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 184, 248 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1, -300 )
+
+[node name="Stage" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Stage"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.2, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.353, 0.556 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.3, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.8, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer7"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 0.9, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer8"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
+motion_scale = Vector2( 1, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer9"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Parallax_Name_Level" type="ParallaxBackground" parent="Stage"]
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Stage/Parallax_Name_Level"]
+motion_scale = Vector2( 1, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Label" type="Label" parent="Stage/Parallax_Name_Level/ParallaxLayer"]
+margin_left = 15.0
+margin_top = -291.0
+margin_right = 135.0
+margin_bottom = -265.0
+custom_fonts/font = SubResource( 1 )
+text = "Level 4"

@@ -5,7 +5,7 @@
 [ext_resource path="res://Escenas/Objetos/Moneda/Moneda.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 37.0135
+radius = 26.0
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
@@ -45,21 +45,21 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[node name="Moneda_2" type="Node2D"]
+[node name="Moneda_3" type="Node2D"]
 
-[node name="Moneda_2" type="KinematicBody2D" parent="."]
+[node name="Moneda_3" type="KinematicBody2D" parent="."]
 position = Vector2( 107, 308 )
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda_2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda_3"]
 position = Vector2( 1, -7 )
 shape = SubResource( 6 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Moneda_2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Moneda_3"]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 5 )
 animation = "girar"
 
-[node name="Portal_Moneda" parent="Moneda_2" instance=ExtResource( 2 )]
-position = Vector2( 1, -7 )
+[node name="Portal_Moneda" parent="Moneda_3" instance=ExtResource( 2 )]
+position = Vector2( 1, -8 )
 escena = "Level_4"

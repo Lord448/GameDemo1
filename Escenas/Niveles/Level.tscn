@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Paisajes/Bosque/Layers/Foreground.png" type="Texture" id=1]
 [ext_resource path="res://Escenas/Personajes/Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://Escenas/Personajes/Dragon/Dragon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Escenas/Niveles/Level.gd" type="Script" id=8]
 [ext_resource path="res://Escenas/Objetos/Moneda/Moneda.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Fonts/Pixel.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 10 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 8 )
@@ -77,3 +82,18 @@ position = Vector2( 0, -303 )
 scale = Vector2( 0.533, 0.558333 )
 texture = ExtResource( 6 )
 centered = false
+
+[node name="Parallax_Name_Level" type="ParallaxBackground" parent="Stage"]
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Stage/Parallax_Name_Level"]
+motion_scale = Vector2( 1, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Label" type="Label" parent="Stage/Parallax_Name_Level/ParallaxLayer"]
+margin_left = 15.0
+margin_top = -291.0
+margin_right = 135.0
+margin_bottom = -265.0
+custom_fonts/font = SubResource( 1 )
+text = "Level 1"
