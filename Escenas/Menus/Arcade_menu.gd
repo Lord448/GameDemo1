@@ -6,6 +6,7 @@ var Velocidad : int
 func _ready():
 	$Presiones/LineEditPre.text = "10"
 	$Velocidad/LineEditVel.text = "1"
+	$MasVel.text = ""
 	Presiones = int($Presiones/LineEditPre.text)
 	Velocidad = int($Velocidad/LineEditVel.text)
 	Velocidad = 100
@@ -22,7 +23,7 @@ func _on_SubirVel_pressed():
 	Velocidad += 100
 	if Velocidad > 700:
 		Velocidad = 700
-		$MasVel.text = "Alto ahí velocista"
+		$MasVel.text = "¡Más despacio velocista!"
 	else:
 		$MasVel.text = ""
 	$Velocidad/LineEditVel.text = String(Velocidad/100)
@@ -53,7 +54,7 @@ func _on_LineEditVel_text_changed(new_text):
 	Velocidad = int($Velocidad/LineEditVel.text)*100
 	if Velocidad > 700:
 		Velocidad = 700
-		$MasVel.text = "Alto ahí velocista"
+		$MasVel.text = "¡Más despacio velocista!"
 	else:
 		$MasVel.text = ""
 	$Velocidad/LineEditVel.text = String(Velocidad/100)
