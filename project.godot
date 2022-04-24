@@ -14,6 +14,10 @@ config/name="Demo1"
 run/main_scene="res://Escenas/Menus/Main_Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Gamehandler="*res://Gamehandler.gd"
+
 [physics]
 
 common/enable_pause_aware_picking=true

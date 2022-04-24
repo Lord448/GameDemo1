@@ -13,4 +13,4 @@ func _on_Button3_pressed():
 
 
 func _on_Button2_pressed():
-	get_tree().change_scene("res://Escenas/Niveles/Level.tscn")
+	get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn")
