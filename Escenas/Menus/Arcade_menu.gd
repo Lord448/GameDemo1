@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	$Presiones/LineEditPre.text = "10"
-	$Velocidad/LineEditVel.text = "1"
+	$Velocidad/LineEditVel.text = "5"
 	$MasVel.text = ""
 	Gamehandler.Presiones = int($Presiones/LineEditPre.text)
 	Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)
