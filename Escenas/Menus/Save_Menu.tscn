@@ -215,7 +215,19 @@ margin_bottom = 460.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Atrás"
+text = "Regresar"
+flat = true
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 605.0
+margin_top = 415.0
+margin_right = 779.0
+margin_bottom = 458.0
+custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Aceptar"
 flat = true
 
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]
