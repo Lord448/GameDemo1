@@ -1,6 +1,6 @@
 extends Node
 
-var Velocidad = 500
+var Velocidad
 var Presiones
 
 func _ready():

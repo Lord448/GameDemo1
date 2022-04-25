@@ -8,7 +8,6 @@ func _ready():
 	Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)
 	Gamehandler.Velocidad = 100
 	
-
 func _on_Aceptar_pressed():
 	if Gamehandler.Velocidad >= 100 && Gamehandler.Presiones >= 10:
 		Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)*100
@@ -25,7 +24,6 @@ func _on_SubirVel_pressed():
 		$MasVel.text = ""
 	$Velocidad/LineEditVel.text = String(Gamehandler.Velocidad/100)
 	
-
 func _on_BajarVel_pressed():
 	Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)*100
 	Gamehandler.Velocidad -= 100
@@ -58,3 +56,7 @@ func _on_LineEditVel_text_changed(new_text):
 
 func _on_LineEditPre_text_changed(new_text):
 	pass # Replace with function body.
+
+
+func _on_Regresar_pressed():
+	get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")

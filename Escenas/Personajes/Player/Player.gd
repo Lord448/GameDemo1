@@ -20,7 +20,6 @@ func mover():
 	else:
 		direccion.x=0
 
-
 func animar():
 	if direccion.x>0:
 		$AnimatedSprite.flip_h=true
