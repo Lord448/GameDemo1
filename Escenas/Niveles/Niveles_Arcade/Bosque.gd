@@ -8,8 +8,8 @@ var timer = Timer.new()
 var aparece = false
 
 func _ready():
-	$PlayerOfi/Camera2D/Explosion/AnimatedSprite.playing = true
-	$PlayerOfi/Camera2D/Explosion.visible = false
+	$Player_Arcade/Camera2D/Explosion/AnimatedSprite.playing = true
+	$Player_Arcade/Camera2D/Explosion.visible = false
 	add_child(timer)
 	timer.set_one_shot(false)
 	timer.set_wait_time(duracion)
@@ -18,7 +18,7 @@ func _ready():
 	
 func _process(delta):
 	if aparece:
-		$PlayerOfi/Camera2D/Explosion.visible = true
+		$Player_Arcade/Camera2D/Explosion.visible = true
 		pedir_presion()
 		aparece = false
 	else:
@@ -29,6 +29,6 @@ func cooldown_finalizo():
 
 func pedir_presion():
 	if Input.is_action_pressed("ui_accept"):
-		$PlayerOfi.direccion.x += 100
+		$Player_Arcade.direccion.x += 100
 	else:
-		$PlayerOfi.direccion.x -= 100
+		$Player_Arcade.direccion.x -= 100

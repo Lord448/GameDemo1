@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Tiles/Tile_23.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Tile_12.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Escenas/Menus/Stage_menu.gd" type="Script" id=12]
 [ext_resource path="res://Paisajes/Bosque/Cartoon_Forest_BG_01.png" type="Texture" id=13]
 [ext_resource path="res://Paisajes/Desierto/Desierto_2/background.png" type="Texture" id=14]
+[ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=15]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -143,8 +144,24 @@
 8/shapes = [  ]
 8/z_index = 0
 
+[sub_resource type="TileSet" id=10]
+0/name = "hyptosis_tile-art-batch-1.png 0"
+0/texture = ExtResource( 15 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 384, 928, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="DynamicFont" id=2]
-size = 58
+size = 56
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -179,19 +196,25 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 327687, 0, 0, 327704, 0, 0, 393223, 0, 0, 393240, 0, 0, 458759, 0, 0, 458776, 0, 0, 524295, 0, 0, 524312, 0, 0, 589831, 0, 0, 589848, 0, 0, 655367, 0, 0, 655384, 0, 0, 720903, 0, 0, 720920, 0, 0, 786439, 0, 0, 786456, 0, 0, 851975, 0, 0, 851992, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0 )
+
 [node name="Escenario" type="Label" parent="."]
-margin_left = 261.0
-margin_top = 155.0
-margin_right = 765.0
-margin_bottom = 218.0
+margin_left = 270.0
+margin_top = 174.0
+margin_right = 763.0
+margin_bottom = 237.0
 custom_fonts/font = SubResource( 2 )
 text = "Selecciona escenario"
 
 [node name="Aceptar" type="Button" parent="."]
-margin_left = 611.0
-margin_top = 414.0
-margin_right = 783.0
-margin_bottom = 457.0
+margin_left = 590.0
+margin_top = 401.0
+margin_right = 762.0
+margin_bottom = 444.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -200,10 +223,10 @@ text = "Aceptar"
 flat = true
 
 [node name="Regresar" type="Button" parent="."]
-margin_left = 242.0
-margin_top = 417.0
-margin_right = 414.0
-margin_bottom = 460.0
+margin_left = 263.0
+margin_top = 401.0
+margin_right = 437.0
+margin_bottom = 444.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )

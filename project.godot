@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Gamehandler="*res://Gamehandler.gd"
+global_var="*res://global_var.gd"
 
 [physics]
 

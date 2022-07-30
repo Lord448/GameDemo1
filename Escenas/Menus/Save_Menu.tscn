@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Escenas/Menus/Main_Menu.gd" type="Script" id=1]
+[ext_resource path="res://Escenas/Menus/Save_Menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonts/Rumbaz-Demo.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://Tiles/Tile_23.png" type="Texture" id=4]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Tiles/Tile_21.png" type="Texture" id=11]
 [ext_resource path="res://Tiles/Tile_22.png" type="Texture" id=12]
 [ext_resource path="res://Fonts/Pixellari.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -154,6 +155,22 @@ font_data = ExtResource( 13 )
 size = 38
 font_data = ExtResource( 3 )
 
+[sub_resource type="TileSet" id=5]
+0/name = "hyptosis_tile-art-batch-1.png 0"
+0/texture = ExtResource( 14 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 384, 928, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [node name="Save_Menu" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -179,9 +196,9 @@ text = "Guardados"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 428.0
-margin_top = 249.0
+margin_top = 250.0
 margin_right = 592.0
-margin_bottom = 294.0
+margin_bottom = 295.0
 custom_colors/font_color_focus = Color( 0.992157, 0.964706, 0.964706, 1 )
 custom_colors/font_color_hover = Color( 0.992157, 0.964706, 0.964706, 1 )
 custom_fonts/font = SubResource( 3 )
@@ -207,27 +224,21 @@ custom_colors/font_color_hover = Color( 0.992157, 0.964706, 0.964706, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "[vacío]"
 
-[node name="Button4" type="Button" parent="."]
-margin_left = 242.0
-margin_top = 417.0
-margin_right = 414.0
-margin_bottom = 460.0
+[node name="Regresar" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 405.0
+margin_right = 430.0
+margin_bottom = 448.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Regresar"
 flat = true
 
-[node name="Button5" type="Button" parent="."]
-margin_left = 605.0
-margin_top = 415.0
-margin_right = 779.0
-margin_bottom = 458.0
-custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
-custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
-custom_fonts/font = SubResource( 4 )
-text = "Aceptar"
-flat = true
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 327687, 0, 0, 327704, 0, 0, 393223, 0, 0, 393240, 0, 0, 458759, 0, 0, 458776, 0, 0, 524295, 0, 0, 524312, 0, 0, 589831, 0, 0, 589848, 0, 0, 655367, 0, 0, 655384, 0, 0, 720903, 0, 0, 720920, 0, 0, 786439, 0, 0, 786456, 0, 0, 851975, 0, 0, 851992, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0 )
 
-[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
-[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]

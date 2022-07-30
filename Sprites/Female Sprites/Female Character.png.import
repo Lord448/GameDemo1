@@ -2,19 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Female_Warrior.png-d9a6a2b23216a802a22451fb01849778.stex"
+path="res://.import/Female Character.png-515950f711e23375af1e227b4026b416.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Female_Warrior_Sprites/Female_Warrior.png"
-dest_files=[ "res://.import/Female_Warrior.png-d9a6a2b23216a802a22451fb01849778.stex" ]
+source_file="res://Sprites/Female Sprites/Female Character.png"
+dest_files=[ "res://.import/Female Character.png-515950f711e23375af1e227b4026b416.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

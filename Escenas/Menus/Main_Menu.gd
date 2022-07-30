@@ -1,11 +1,13 @@
 extends Node2D
 
-func _on_Button_pressed():
+
+func _on_Jugar_pressed():
 	get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")
 
-func _on_Button4_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")
+
+func _on_Salir_pressed():
+	get_tree().quit()
 
 
-func _on_Button5_pressed():
-	get_tree().change_scene("res://Escenas/Niveles/Level.tscn")
+func _on_Play_pressed():
+	get_tree().change_scene("res://Escenas/Menus/Characters_Menu.tscn")

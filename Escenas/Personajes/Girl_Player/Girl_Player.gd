@@ -7,7 +7,7 @@ var arriba = Vector2(0,-1)
 func _ready():
 	limite=get_viewport_rect().size
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	mover()
 	move_and_slide(direccion,arriba)
 	animar()
@@ -22,12 +22,12 @@ func mover():
 
 func animar():
 	if direccion.x>0:
-		$AnimatedSprite.flip_h=true
+		$AnimatedSprite.flip_h=false
 		$AnimatedSprite.play("caminar")
 		$AnimatedSprite.playing = true
 
 	if direccion.x<0:
-		$AnimatedSprite.flip_h=false
+		$AnimatedSprite.flip_h=true
 		$AnimatedSprite.play("caminar")
 		$AnimatedSprite.playing = true
 

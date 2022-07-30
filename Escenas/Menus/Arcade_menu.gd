@@ -12,7 +12,7 @@ func _on_Aceptar_pressed():
 	if Gamehandler.Velocidad >= 100 && Gamehandler.Presiones >= 10:
 		Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)*100
 		Gamehandler.Presiones = int($Presiones/LineEditPre.text)
-		get_tree().change_scene("res://Escenas/Menus/Characters_Menu.tscn")
+		get_tree().change_scene("res://Escenas/Menus/Stage_menu.tscn")
 
 func _on_SubirVel_pressed():
 	Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)*100

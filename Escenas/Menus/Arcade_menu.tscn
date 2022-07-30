@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Tiles/Tile_23.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Tile_12.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=10]
 [ext_resource path="res://Escenas/Menus/Arcade_menu.gd" type="Script" id=11]
 [ext_resource path="res://Fonts/Rumbaz-Demo.otf" type="DynamicFontData" id=12]
+[ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -141,7 +142,27 @@
 8/shapes = [  ]
 8/z_index = 0
 
+[sub_resource type="TileSet" id=8]
+0/name = "hyptosis_tile-art-batch-1.png 0"
+0/texture = ExtResource( 13 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 384, 928, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="DynamicFont" id=4]
+size = 38
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=7]
 size = 38
 font_data = ExtResource( 12 )
 
@@ -161,16 +182,13 @@ font_data = ExtResource( 10 )
 size = 28
 font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=7]
-size = 38
-font_data = ExtResource( 12 )
-
 [node name="Arcade_menu" type="Node2D"]
 script = ExtResource( 11 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1021.0
-margin_bottom = 602.0
+margin_left = 2.0
+margin_right = 1024.0
+margin_bottom = 603.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -180,11 +198,17 @@ cell_size = Vector2( 31, 31 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65557, 5, 0, 131072, 3, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 5, 0, 196608, 3, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 4, 0, 196628, 4, 0, 196629, 5, 0, 262144, 3, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262161, 4, 0, 262162, 4, 0, 262163, 4, 0, 262164, 4, 0, 262165, 5, 0, 327680, 3, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327697, 4, 0, 327698, 4, 0, 327699, 4, 0, 327700, 4, 0, 327701, 5, 0, 393216, 3, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393233, 4, 0, 393234, 4, 0, 393235, 4, 0, 393236, 4, 0, 393237, 5, 0, 458752, 3, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458769, 4, 0, 458770, 4, 0, 458771, 4, 0, 458772, 4, 0, 458773, 5, 0, 524288, 3, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 5, 0, 589824, 3, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 5, 0, 655360, 3, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 655380, 4, 0, 655381, 5, 0, 720896, 3, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 720905, 4, 0, 720906, 4, 0, 720907, 4, 0, 720908, 4, 0, 720909, 4, 0, 720910, 4, 0, 720911, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 720915, 4, 0, 720916, 4, 0, 720917, 5, 0, 786432, 6, 0, 786433, 7, 0, 786434, 7, 0, 786435, 7, 0, 786436, 7, 0, 786437, 7, 0, 786438, 7, 0, 786439, 7, 0, 786440, 7, 0, 786441, 7, 0, 786442, 7, 0, 786443, 7, 0, 786444, 7, 0, 786445, 7, 0, 786446, 7, 0, 786447, 7, 0, 786448, 7, 0, 786449, 7, 0, 786450, 7, 0, 786451, 7, 0, 786452, 7, 0, 786453, 8, 0 )
 
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 8 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 327687, 0, 0, 327704, 0, 0, 393223, 0, 0, 393240, 0, 0, 458759, 0, 0, 458776, 0, 0, 524295, 0, 0, 524312, 0, 0, 589831, 0, 0, 589848, 0, 0, 655367, 0, 0, 655384, 0, 0, 720903, 0, 0, 720920, 0, 0, 786439, 0, 0, 786456, 0, 0, 851975, 0, 0, 851992, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0 )
+
 [node name="Aceptar" type="Button" parent="."]
-margin_left = 618.0
-margin_top = 410.0
-margin_right = 773.0
-margin_bottom = 453.0
+margin_left = 607.0
+margin_top = 399.0
+margin_right = 762.0
+margin_bottom = 442.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -192,47 +216,61 @@ custom_fonts/font = SubResource( 4 )
 text = "Aceptar"
 flat = true
 
+[node name="Regresar" type="Button" parent="."]
+margin_left = 268.0
+margin_top = 399.0
+margin_right = 442.0
+margin_bottom = 442.0
+custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Regresar"
+flat = true
+
 [node name="Velocidad" type="Control" parent="."]
 margin_left = -25.0
 margin_top = 7.0
 margin_right = 15.0
 margin_bottom = 47.0
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="LabelVel" type="Label" parent="Velocidad"]
-margin_left = 561.0
+margin_left = 586.0
 margin_top = 183.0
-margin_right = 716.0
+margin_right = 741.0
 margin_bottom = 222.0
 custom_fonts/font = SubResource( 2 )
 text = "Velocidad"
 
 [node name="LineEditVel" type="LineEdit" parent="Velocidad"]
-margin_left = 570.0
+margin_left = 594.0
 margin_top = 232.0
-margin_right = 676.0
+margin_right = 700.0
 margin_bottom = 283.0
 custom_fonts/font = SubResource( 3 )
 text = "1"
 align = 1
 
 [node name="Botones" type="Control" parent="Velocidad"]
-margin_left = 684.0
-margin_top = 236.0
-margin_right = 713.0
-margin_bottom = 279.0
+anchor_left = 1.571
+anchor_top = 1.0
+anchor_right = 1.571
+anchor_bottom = 1.0
+margin_left = 621.16
+margin_top = 196.0
+margin_right = 650.16
+margin_bottom = 239.0
 
 [node name="SubirVel" type="Button" parent="Velocidad/Botones"]
-margin_right = 30.0
+margin_left = 21.0
+margin_right = 51.0
 margin_bottom = 20.0
 text = "+"
 
 [node name="BajarVel" type="Button" parent="Velocidad/Botones"]
-margin_top = 23.0
-margin_right = 30.0
-margin_bottom = 43.0
+margin_left = 21.0
+margin_top = 24.0
+margin_right = 51.0
+margin_bottom = 44.0
 text = "-"
 
 [node name="Presiones" type="Control" parent="."]
@@ -278,37 +316,26 @@ rect_pivot_offset = Vector2( 16, 14 )
 text = "+"
 
 [node name="MasVel" type="Label" parent="."]
-margin_left = 554.0
-margin_top = 297.0
-margin_right = 788.0
-margin_bottom = 325.0
+margin_left = 522.0
+margin_top = 314.0
+margin_right = 756.0
+margin_bottom = 342.0
 custom_fonts/font = SubResource( 5 )
 align = 1
 
 [node name="MasPre" type="Label" parent="."]
-margin_left = 293.0
-margin_top = 297.0
-margin_right = 493.0
-margin_bottom = 325.0
+margin_left = 292.0
+margin_top = 312.0
+margin_right = 492.0
+margin_bottom = 340.0
 custom_fonts/font = SubResource( 6 )
 align = 1
 
-[node name="Regresar" type="Button" parent="."]
-margin_left = 253.0
-margin_top = 411.0
-margin_right = 427.0
-margin_bottom = 454.0
-custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
-custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "Regresar"
-flat = true
-
 [connection signal="pressed" from="Aceptar" to="." method="_on_Aceptar_pressed"]
+[connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
 [connection signal="text_changed" from="Velocidad/LineEditVel" to="." method="_on_LineEditVel_text_changed"]
 [connection signal="pressed" from="Velocidad/Botones/SubirVel" to="." method="_on_SubirVel_pressed"]
 [connection signal="pressed" from="Velocidad/Botones/BajarVel" to="." method="_on_BajarVel_pressed"]
 [connection signal="text_changed" from="Presiones/LineEditPre" to="." method="_on_LineEditPre_text_changed"]
 [connection signal="pressed" from="Presiones/Botones/BajarPre" to="." method="_on_BajarPre_pressed"]
 [connection signal="pressed" from="Presiones/Botones/SubirPre" to="." method="_on_SubirPre_pressed"]
-[connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
