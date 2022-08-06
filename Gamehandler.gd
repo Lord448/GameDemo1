@@ -3,6 +3,5 @@ extends Node
 var Velocidad = 500
 var Presiones
 var Stage
-
-func _ready():
-	pass
+var player_dir: String = "res://Escenas/Personajes/Player/Player.tscn"
+var player: Node2D

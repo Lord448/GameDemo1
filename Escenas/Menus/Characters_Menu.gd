@@ -7,11 +7,11 @@ func go_to_scene():
 	get_tree().change_scene("res://Escenas/Niveles/Level.tscn")
 
 func _on_Boy_Player_pressed():
-	global_var.player_dir = boy_player_dir
+	Gamehandler.player_dir = boy_player_dir
 	go_to_scene()
 	
 func _on_Girl_Player_pressed():
-	global_var.player_dir = girl_player_dir
+	Gamehandler.player_dir = girl_player_dir
 	go_to_scene()
 	
 func _on_Regresar_pressed():
