@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Tiles/Tile_23.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Tile_12.png" type="Texture" id=2]
@@ -12,9 +12,27 @@
 [ext_resource path="res://Fonts/Rumbaz-Demo.otf" type="DynamicFontData" id=10]
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=11]
 [ext_resource path="res://Escenas/Menus/Stage_menu.gd" type="Script" id=12]
-[ext_resource path="res://Paisajes/Bosque/Cartoon_Forest_BG_01.png" type="Texture" id=13]
+[ext_resource path="res://Paisajes/Bosque/Bosque_01/Cartoon_Forest_BG_01.png" type="Texture" id=13]
 [ext_resource path="res://Paisajes/Desierto/Desierto_2/background.png" type="Texture" id=14]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=15]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_4/background.png" type="Texture" id=16]
+[ext_resource path="res://Paisajes/Infantil/Infantil_4/platformer_background_4.png" type="Texture" id=17]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_2/background.png" type="Texture" id=18]
+[ext_resource path="res://Paisajes/Infantil/Infantil_1/platformer_background_1.png" type="Texture" id=19]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_1/background.png" type="Texture" id=20]
+[ext_resource path="res://Paisajes/Naturista/Naturista_2/game_background_2.png" type="Texture" id=21]
+[ext_resource path="res://Paisajes/Naturista/Naturista_3/game_background_3.1.png" type="Texture" id=22]
+[ext_resource path="res://Paisajes/Naturista/Naturista_4/game_background_4.png" type="Texture" id=23]
+[ext_resource path="res://Paisajes/Bosque/Bosque_03/Cartoon_Forest_BG_04.png" type="Texture" id=24]
+[ext_resource path="res://Paisajes/Bosque/Bosque_02/Cartoon_Forest_BG_02.png" type="Texture" id=25]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/BG_01.png" type="Texture" id=26]
+[ext_resource path="res://Paisajes/Naturista/Naturista_1/game_background_1.png" type="Texture" id=27]
+[ext_resource path="res://Paisajes/Desierto/Desierto_1/background.png" type="Texture" id=28]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/background.png" type="Texture" id=29]
+[ext_resource path="res://Paisajes/Invierno/Invierno_3/BG_03.png" type="Texture" id=30]
+[ext_resource path="res://Paisajes/Invierno/Invierno_2/BG_02.png" type="Texture" id=31]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_3/background.png" type="Texture" id=32]
+[ext_resource path="res://Paisajes/Infantil/Infantil_3/platformer_background_3.png" type="Texture" id=33]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -168,10 +186,7 @@ font_data = ExtResource( 11 )
 size = 38
 font_data = ExtResource( 10 )
 
-[sub_resource type="Gradient" id=8]
-
-[sub_resource type="GradientTexture" id=9]
-gradient = SubResource( 8 )
+[sub_resource type="ImageTexture" id=11]
 
 [sub_resource type="Gradient" id=6]
 
@@ -191,7 +206,7 @@ scale = Vector2( 1.5, 1.5 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 31, 31 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65557, 5, 0, 131072, 3, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 5, 0, 196608, 3, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 4, 0, 196628, 4, 0, 196629, 5, 0, 262144, 3, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262161, 4, 0, 262162, 4, 0, 262163, 4, 0, 262164, 4, 0, 262165, 5, 0, 327680, 3, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327697, 4, 0, 327698, 4, 0, 327699, 4, 0, 327700, 4, 0, 327701, 5, 0, 393216, 3, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393233, 4, 0, 393234, 4, 0, 393235, 4, 0, 393236, 4, 0, 393237, 5, 0, 458752, 3, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458769, 4, 0, 458770, 4, 0, 458771, 4, 0, 458772, 4, 0, 458773, 5, 0, 524288, 3, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 5, 0, 589824, 3, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 5, 0, 655360, 3, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 655380, 4, 0, 655381, 5, 0, 720896, 3, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 720905, 4, 0, 720906, 4, 0, 720907, 4, 0, 720908, 4, 0, 720909, 4, 0, 720910, 4, 0, 720911, 4, 0, 720912, 4, 0, 720913, 4, 0, 720914, 4, 0, 720915, 4, 0, 720916, 4, 0, 720917, 5, 0, 786432, 6, 0, 786433, 7, 0, 786434, 7, 0, 786435, 7, 0, 786436, 7, 0, 786437, 7, 0, 786438, 7, 0, 786439, 7, 0, 786440, 7, 0, 786441, 7, 0, 786442, 7, 0, 786443, 7, 0, 786444, 7, 0, 786445, 7, 0, 786446, 7, 0, 786447, 7, 0, 786448, 7, 0, 786449, 7, 0, 786450, 7, 0, 786451, 7, 0, 786452, 7, 0, 786453, 8, 0 )
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 2, 0, 65536, 3, 0, 65557, 5, 0, 131072, 3, 0, 131093, 5, 0, 196608, 3, 0, 196629, 5, 0, 262144, 3, 0, 262165, 5, 0, 327680, 3, 0, 327701, 5, 0, 393216, 3, 0, 393237, 5, 0, 458752, 3, 0, 458773, 5, 0, 524288, 3, 0, 524309, 5, 0, 589824, 3, 0, 589845, 5, 0, 655360, 3, 0, 655381, 5, 0, 720896, 3, 0, 720917, 5, 0, 786432, 6, 0, 786433, 7, 0, 786434, 7, 0, 786435, 7, 0, 786436, 7, 0, 786437, 7, 0, 786438, 7, 0, 786439, 7, 0, 786440, 7, 0, 786441, 7, 0, 786442, 7, 0, 786443, 7, 0, 786444, 7, 0, 786445, 7, 0, 786446, 7, 0, 786447, 7, 0, 786448, 7, 0, 786449, 7, 0, 786450, 7, 0, 786451, 7, 0, 786452, 7, 0, 786453, 8, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -200,21 +215,20 @@ __meta__ = {
 tile_set = SubResource( 10 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 327687, 0, 0, 327704, 0, 0, 393223, 0, 0, 393240, 0, 0, 458759, 0, 0, 458776, 0, 0, 524295, 0, 0, 524312, 0, 0, 589831, 0, 0, 589848, 0, 0, 655367, 0, 0, 655384, 0, 0, 720903, 0, 0, 720920, 0, 0, 786439, 0, 0, 786456, 0, 0, 851975, 0, 0, 851992, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0 )
 
 [node name="Escenario" type="Label" parent="."]
 margin_left = 270.0
-margin_top = 174.0
+margin_top = 50.0
 margin_right = 763.0
-margin_bottom = 237.0
+margin_bottom = 113.0
 custom_fonts/font = SubResource( 2 )
 text = "Selecciona escenario"
 
 [node name="Aceptar" type="Button" parent="."]
-margin_left = 590.0
-margin_top = 401.0
-margin_right = 762.0
-margin_bottom = 444.0
+margin_left = 813.0
+margin_top = 520.0
+margin_right = 985.0
+margin_bottom = 563.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -223,10 +237,10 @@ text = "Aceptar"
 flat = true
 
 [node name="Regresar" type="Button" parent="."]
-margin_left = 263.0
-margin_top = 401.0
-margin_right = 437.0
-margin_bottom = 444.0
+margin_left = 49.0
+margin_top = 519.0
+margin_right = 223.0
+margin_bottom = 562.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -234,28 +248,226 @@ custom_fonts/font = SubResource( 3 )
 text = "Regresar"
 flat = true
 
-[node name="Bosque" type="TextureButton" parent="."]
-margin_left = 304.0
-margin_top = 256.0
-margin_right = 2224.0
-margin_bottom = 1336.0
+[node name="Stage 01" type="TextureButton" parent="."]
+margin_left = 61.0
+margin_top = 109.0
+margin_right = 1981.0
+margin_bottom = 1189.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource( 13 )
-texture_pressed = SubResource( 9 )
+texture_pressed = SubResource( 11 )
 
-[node name="Desierto" type="TextureButton" parent="."]
-margin_left = 561.0
-margin_top = 254.0
-margin_right = 2481.0
-margin_bottom = 1334.0
+[node name="Stage 02" type="TextureButton" parent="."]
+margin_left = 242.0
+margin_top = 109.0
+margin_right = 2162.0
+margin_bottom = 1189.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 14 )
 texture_pressed = SubResource( 7 )
 
+[node name="Stage 03" type="TextureButton" parent="."]
+margin_left = 422.0
+margin_top = 108.0
+margin_right = 2342.0
+margin_bottom = 1188.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 20 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 04" type="TextureButton" parent="."]
+margin_left = 603.0
+margin_top = 109.0
+margin_right = 2523.0
+margin_bottom = 1189.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 19 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 05" type="TextureButton" parent="."]
+margin_left = 787.0
+margin_top = 110.0
+margin_right = 2707.0
+margin_bottom = 1190.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 26 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 06" type="TextureButton" parent="."]
+margin_left = 61.0
+margin_top = 213.0
+margin_right = 1981.0
+margin_bottom = 1293.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 27 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 07" type="TextureButton" parent="."]
+margin_left = 242.0
+margin_top = 210.0
+margin_right = 2162.0
+margin_bottom = 1290.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 25 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 08" type="TextureButton" parent="."]
+margin_left = 422.0
+margin_top = 211.0
+margin_right = 2342.0
+margin_bottom = 1291.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 28 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 09" type="TextureButton" parent="."]
+margin_left = 604.0
+margin_top = 212.0
+margin_right = 2524.0
+margin_bottom = 1292.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 32 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 10" type="TextureButton" parent="."]
+margin_left = 786.0
+margin_top = 213.0
+margin_right = 2706.0
+margin_bottom = 1293.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 33 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 11" type="TextureButton" parent="."]
+margin_left = 61.9999
+margin_top = 316.0
+margin_right = 1982.0
+margin_bottom = 1396.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 31 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 12" type="TextureButton" parent="."]
+margin_left = 242.0
+margin_top = 314.0
+margin_right = 2162.0
+margin_bottom = 1394.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 21 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 13" type="TextureButton" parent="."]
+margin_left = 423.0
+margin_top = 314.0
+margin_right = 2343.0
+margin_bottom = 1394.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 22 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 14" type="TextureButton" parent="."]
+margin_left = 603.0
+margin_top = 314.0
+margin_right = 2523.0
+margin_bottom = 1394.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 24 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 15" type="TextureButton" parent="."]
+margin_left = 786.0
+margin_top = 316.0
+margin_right = 2706.0
+margin_bottom = 1396.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 29 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 16" type="TextureButton" parent="."]
+margin_left = 61.0
+margin_top = 419.0
+margin_right = 1981.0
+margin_bottom = 1499.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 16 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 17" type="TextureButton" parent="."]
+margin_left = 242.0
+margin_top = 420.0
+margin_right = 2162.0
+margin_bottom = 1500.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 17 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 18" type="TextureButton" parent="."]
+margin_left = 423.0
+margin_top = 420.0
+margin_right = 2343.0
+margin_bottom = 1500.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 23 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 19" type="TextureButton" parent="."]
+margin_left = 604.0
+margin_top = 420.0
+margin_right = 2524.0
+margin_bottom = 1500.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 18 )
+texture_pressed = SubResource( 7 )
+
+[node name="Stage 20" type="TextureButton" parent="."]
+margin_left = 787.0
+margin_top = 420.0
+margin_right = 2707.0
+margin_bottom = 1500.0
+rect_scale = Vector2( 0.09, 0.09 )
+toggle_mode = true
+texture_normal = ExtResource( 30 )
+texture_pressed = SubResource( 7 )
+
 [connection signal="pressed" from="Aceptar" to="." method="_on_Aceptar_pressed"]
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
-[connection signal="pressed" from="Bosque" to="." method="_on_Bosque_pressed"]
-[connection signal="pressed" from="Desierto" to="." method="_on_Desierto_pressed"]
+[connection signal="toggled" from="Stage 01" to="." method="_on_Stage_01_toggled"]
+[connection signal="toggled" from="Stage 02" to="." method="_on_Stage_02_toggled"]
+[connection signal="toggled" from="Stage 03" to="." method="_on_Stage_03_toggled"]
+[connection signal="toggled" from="Stage 04" to="." method="_on_Stage_04_toggled"]
+[connection signal="toggled" from="Stage 05" to="." method="_on_Stage_05_toggled"]
+[connection signal="toggled" from="Stage 06" to="." method="_on_Stage_06_toggled"]
+[connection signal="toggled" from="Stage 07" to="." method="_on_Stage_07_toggled"]
+[connection signal="toggled" from="Stage 08" to="." method="_on_Stage_08_toggled"]
+[connection signal="toggled" from="Stage 09" to="." method="_on_Stage_09_toggled"]
+[connection signal="toggled" from="Stage 10" to="." method="_on_Stage_10_toggled"]
+[connection signal="toggled" from="Stage 11" to="." method="_on_Stage_11_toggled"]
+[connection signal="toggled" from="Stage 12" to="." method="_on_Stage_12_toggled"]
+[connection signal="toggled" from="Stage 13" to="." method="_on_Stage_13_toggled"]
+[connection signal="toggled" from="Stage 14" to="." method="_on_Stage_14_toggled"]
+[connection signal="toggled" from="Stage 15" to="." method="_on_Stage_15_toggled"]
+[connection signal="toggled" from="Stage 16" to="." method="_on_Stage_16_toggled"]
+[connection signal="toggled" from="Stage 17" to="." method="_on_Stage_17_toggled"]
+[connection signal="toggled" from="Stage 18" to="." method="_on_Stage_18_toggled"]
+[connection signal="toggled" from="Stage 19" to="." method="_on_Stage_19_toggled"]
+[connection signal="toggled" from="Stage 20" to="." method="_on_Stage_20_toggled"]
