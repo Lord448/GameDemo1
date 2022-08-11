@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Paisajes/Bosque/Bosque_01/Layers/Sky.png" type="Texture" id=1]
-[ext_resource path="res://Paisajes/Bosque/Bosque_01/Layers/Foreground.png" type="Texture" id=2]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/Middle.png" type="Texture" id=1]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/Sky.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/Personajes/Player/Player_Arcade.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Paisajes/Bosque/Bosque_01/Layers/Ground.png" type="Texture" id=4]
-[ext_resource path="res://Paisajes/Bosque/Bosque_01/Layers/BG_Decor.png" type="Texture" id=5]
-[ext_resource path="res://Paisajes/Bosque/Bosque_01/Layers/Middle_Decor.png" type="Texture" id=6]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/BG.png" type="Texture" id=4]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/Foreground.png" type="Texture" id=5]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/Snow.png" type="Texture" id=6]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/Ground_02.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/Niveles/Niveles_Arcade/Stage_01.gd" type="Script" id=8]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Layers/Ground_01.png" type="Texture" id=9]
 
 [node name="Bosque" type="Node2D"]
 script = ExtResource( 8 )
@@ -33,7 +35,7 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer"]
 position = Vector2( 0, -301 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -46,7 +48,7 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -59,7 +61,7 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 6 )
+texture = ExtResource( 1 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -72,7 +74,33 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer4"]
 position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0 )
+motion_mirroring = Vector2( 1023, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 0, -303 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 7 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
@@ -82,13 +110,13 @@ __meta__ = {
 layer = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground2"]
-motion_scale = Vector2( 1, 0 )
+motion_scale = Vector2( 2, 0 )
 motion_mirroring = Vector2( 1023, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground2/ParallaxLayer"]
 position = Vector2( 0, -303 )
 scale = Vector2( 0.533, 0.558333 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 centered = false
 __meta__ = {
 "_edit_lock_": true
