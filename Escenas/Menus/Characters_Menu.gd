@@ -15,4 +15,4 @@ func _on_Girl_Player_pressed():
 	go_to_scene()
 	
 func _on_Regresar_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Stage_menu.tscn")
+	get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")
