@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Paisajes/Desierto/Desierto_2/4.png" type="Texture" id=1]
-[ext_resource path="res://Paisajes/Desierto/Desierto_2/5.png" type="Texture" id=2]
-[ext_resource path="res://Paisajes/Desierto/Desierto_2/1.png" type="Texture" id=3]
-[ext_resource path="res://Paisajes/Desierto/Desierto_2/2.png" type="Texture" id=4]
-[ext_resource path="res://Paisajes/Desierto/Desierto_2/3.png" type="Texture" id=5]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/Layers/4.png" type="Texture" id=1]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/Layers/5.png" type="Texture" id=2]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/Layers/2.png" type="Texture" id=3]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/Layers/3.png" type="Texture" id=4]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/Layers/1.png" type="Texture" id=5]
 [ext_resource path="res://Escenas/Personajes/Player/Player_Arcade.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Escenas/Niveles/Niveles_Arcade/Stage_02.gd" type="Script" id=8]
 
@@ -31,7 +31,7 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer"]
 position = Vector2( 0, -301 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
@@ -41,7 +41,7 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
@@ -51,7 +51,7 @@ motion_mirroring = Vector2( 1023, 0 )
 [node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Stage/ParallaxBackground"]
@@ -69,7 +69,7 @@ motion_scale = Vector2( 0.5, 0 )
 motion_mirroring = Vector2( 1023, 0 )
 
 [node name="Sprite" type="Sprite" parent="Stage/ParallaxBackground/ParallaxLayer5"]
-position = Vector2( 0, -300 )
-scale = Vector2( 0.533333, 0.555556 )
+position = Vector2( 0, -132 )
+scale = Vector2( 0.533333, 0.399074 )
 texture = ExtResource( 2 )
 centered = false
