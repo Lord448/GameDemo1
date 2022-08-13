@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Escenas/Personajes/Dragon/Portal.gd" type="Script" id=1]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 32.0156
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.875, 23.5 )
 
 [node name="Portal_Moneda" type="Area2D"]
 script = ExtResource( 1 )

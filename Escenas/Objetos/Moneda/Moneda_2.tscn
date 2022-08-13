@@ -1,48 +1,26 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Sprites/Moneda_Sprites/moneda.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0017.png" type="Texture" id=1]
 [ext_resource path="res://Escenas/Objetos/Moneda/Portal_Moneda.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escenas/Objetos/Moneda/Moneda.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0007.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0011.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0009.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0013.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0001.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0005.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0015.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0003.png" type="Texture" id=11]
 
-[sub_resource type="CircleShape2D" id=6]
-radius = 25.0
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 200, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 400, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 600, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 800, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1000, 0, 200, 300 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 122.25, 128 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "girar",
-"speed": 8.0
+"speed": 13.0
 } ]
 
 [node name="Moneda_2" type="Node2D"]
@@ -52,14 +30,16 @@ position = Vector2( 107, 308 )
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda_2"]
-position = Vector2( 1, -7 )
+position = Vector2( 105.75, -86 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Moneda_2"]
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 145.5, -113.5 )
+scale = Vector2( 0.33, 0.33 )
 frames = SubResource( 5 )
 animation = "girar"
+frame = 4
 
 [node name="Portal_Moneda" parent="Moneda_2" instance=ExtResource( 2 )]
-position = Vector2( 1, -7 )
+position = Vector2( -20, -68 )
 escena = "Level_3"

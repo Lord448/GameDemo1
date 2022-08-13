@@ -21,12 +21,12 @@ func mover():
 		direccion.x=0
 
 func animar():
-	if direccion.x>0:
+	if direccion.x<0:
 		$AnimatedSprite.flip_h=true
 		$AnimatedSprite.play("caminar")
 		$AnimatedSprite.playing = true
 
-	if direccion.x<0:
+	if direccion.x>0:
 		$AnimatedSprite.flip_h=false
 		$AnimatedSprite.play("caminar")
 		$AnimatedSprite.playing = true

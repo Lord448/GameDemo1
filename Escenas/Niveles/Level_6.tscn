@@ -27,7 +27,7 @@ font_data = ExtResource( 12 )
 script = SubResource( 2 )
 
 [node name="Moneda_6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 864, -91 )
+position = Vector2( 875, -183 )
 
 [node name="Dragon_6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 178, 253 )

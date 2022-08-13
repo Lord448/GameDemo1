@@ -1,73 +1,59 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Escenas/Objetos/Moneda/Portal_Moneda_final.gd" type="Script" id=1]
 [ext_resource path="res://Escenas/Objetos/Moneda/Moneda.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/Moneda_Sprites/moneda.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0015.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0019.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0021.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0011.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0013.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0007.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0017.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0005.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0003.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0009.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0023.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0025.png" type="Texture" id=15]
 
-[sub_resource type="CircleShape2D" id=6]
-radius = 26.0
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 200, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 400, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 600, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 800, 0, 200, 300 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1000, 0, 200, 300 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 74.125, 59.25 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "girar",
-"speed": 8.0
+"speed": 20.0
 } ]
 
-[sub_resource type="CircleShape2D" id=13]
-radius = 33.0
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 58.5, 47.5 )
 
 [node name="Moneda_6" type="Node2D"]
 
 [node name="Moneda_6" type="KinematicBody2D" parent="."]
-position = Vector2( 107, 308 )
+position = Vector2( 107, 304 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda_6"]
-position = Vector2( 1, -7 )
+position = Vector2( 18.875, 15.75 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Moneda_6"]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 5 )
 animation = "girar"
+frame = 9
 
 [node name="Portal_Moneda_final" type="Area2D" parent="Moneda_6"]
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda_6/Portal_Moneda_final"]
-position = Vector2( 1, -7 )
-shape = SubResource( 13 )
+position = Vector2( -43, 16 )
+shape = SubResource( 7 )
 
 [connection signal="body_entered" from="Moneda_6/Portal_Moneda_final" to="Moneda_6/Portal_Moneda_final" method="_on_Portal_Moneda_final_body_entered"]

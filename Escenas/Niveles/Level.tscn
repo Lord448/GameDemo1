@@ -17,7 +17,7 @@ font_data = ExtResource( 10 )
 [node name="Level" type="Node2D"]
 
 [node name="Moneda" parent="." instance=ExtResource( 9 )]
-position = Vector2( 850, -121 )
+position = Vector2( 852, -84 )
 
 [node name="Dragon" parent="." instance=ExtResource( 7 )]
 position = Vector2( 76, -170 )
@@ -29,6 +29,9 @@ position = Vector2( 76, -170 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
 motion_scale = Vector2( 0, 0 )
 motion_mirroring = Vector2( 1023, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer"]
 position = Vector2( 0, -301 )
@@ -39,6 +42,9 @@ centered = false
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
 motion_scale = Vector2( 0.2, 0 )
 motion_mirroring = Vector2( 1023, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 0, -303 )
@@ -49,6 +55,9 @@ centered = false
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
 motion_scale = Vector2( 0.3, 0 )
 motion_mirroring = Vector2( 1023, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer3"]
 position = Vector2( 0, -303 )
@@ -59,6 +68,9 @@ centered = false
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
 motion_scale = Vector2( 0.5, 0 )
 motion_mirroring = Vector2( 1023, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer4"]
 position = Vector2( 0, -303 )
@@ -72,6 +84,9 @@ layer = 1
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground2"]
 motion_scale = Vector2( 1, 0 )
 motion_mirroring = Vector2( 1023, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground2/ParallaxLayer"]
 position = Vector2( 0, -303 )
