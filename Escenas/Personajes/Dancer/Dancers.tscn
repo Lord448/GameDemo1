@@ -1,0 +1,74 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide5.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap7.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide6.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap6.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide7.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Dancer_Sprites/snap/snap8.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Dancer_Sprites/slide/slide8.png" type="Texture" id=16]
+[ext_resource path="res://Escenas/Personajes/Dancer/Dancer_1.gd" type="Script" id=17]
+[ext_resource path="res://Escenas/Personajes/Dancer/Dancer_2.gd" type="Script" id=18]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 42.0
+height = 50.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "bailar",
+"speed": 8.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 40.0
+height = 58.0
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "bailar",
+"speed": 8.0
+} ]
+
+[node name="Dancers" type="Node2D"]
+
+[node name="Dancer_1" type="KinematicBody2D" parent="."]
+position = Vector2( 21, 0 )
+script = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dancer_1"]
+position = Vector2( 108, 176 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Dancer_1"]
+position = Vector2( 100, 168 )
+scale = Vector2( 2.90385, 2.7783 )
+frames = SubResource( 2 )
+animation = "bailar"
+
+[node name="Dancer_2" type="KinematicBody2D" parent="."]
+position = Vector2( 19, -1 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dancer_2"]
+position = Vector2( 892, 176 )
+shape = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Dancer_2"]
+position = Vector2( 894, 161 )
+scale = Vector2( 3.32692, 3.05189 )
+frames = SubResource( 4 )
+animation = "bailar"

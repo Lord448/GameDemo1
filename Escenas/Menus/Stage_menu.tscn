@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Tiles/Tile_23.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Tile_12.png" type="Texture" id=2]
@@ -186,9 +186,14 @@ font_data = ExtResource( 11 )
 size = 38
 font_data = ExtResource( 10 )
 
-[sub_resource type="ImageTexture" id=11]
+[sub_resource type="Gradient" id=11]
+
+[sub_resource type="GradientTexture" id=12]
+gradient = SubResource( 11 )
 
 [sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.0628571, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.0628571, 0.0628571, 0.0628571, 1, 1, 1, 1, 1 )
 
 [sub_resource type="GradientTexture" id=7]
 gradient = SubResource( 6 )
@@ -248,7 +253,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Regresar"
 flat = true
 
-[node name="Stage 01" type="TextureButton" parent="."]
+[node name="Stage_01" type="TextureButton" parent="."]
 margin_left = 61.0
 margin_top = 109.0
 margin_right = 1981.0
@@ -257,9 +262,9 @@ rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource( 13 )
-texture_pressed = SubResource( 11 )
+texture_pressed = SubResource( 12 )
 
-[node name="Stage 02" type="TextureButton" parent="."]
+[node name="Stage_02" type="TextureButton" parent="."]
 margin_left = 242.0
 margin_top = 109.0
 margin_right = 2162.0
@@ -269,7 +274,7 @@ toggle_mode = true
 texture_normal = ExtResource( 14 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 03" type="TextureButton" parent="."]
+[node name="Stage_3" type="TextureButton" parent="."]
 margin_left = 422.0
 margin_top = 108.0
 margin_right = 2342.0
@@ -279,7 +284,7 @@ toggle_mode = true
 texture_normal = ExtResource( 20 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 04" type="TextureButton" parent="."]
+[node name="Stage_4" type="TextureButton" parent="."]
 margin_left = 603.0
 margin_top = 109.0
 margin_right = 2523.0
@@ -289,7 +294,7 @@ toggle_mode = true
 texture_normal = ExtResource( 19 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 05" type="TextureButton" parent="."]
+[node name="Stage_5" type="TextureButton" parent="."]
 margin_left = 787.0
 margin_top = 110.0
 margin_right = 2707.0
@@ -299,7 +304,7 @@ toggle_mode = true
 texture_normal = ExtResource( 26 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 06" type="TextureButton" parent="."]
+[node name="Stage_6" type="TextureButton" parent="."]
 margin_left = 61.0
 margin_top = 213.0
 margin_right = 1981.0
@@ -309,7 +314,7 @@ toggle_mode = true
 texture_normal = ExtResource( 27 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 07" type="TextureButton" parent="."]
+[node name="Stage_7" type="TextureButton" parent="."]
 margin_left = 242.0
 margin_top = 210.0
 margin_right = 2162.0
@@ -319,7 +324,7 @@ toggle_mode = true
 texture_normal = ExtResource( 25 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 08" type="TextureButton" parent="."]
+[node name="Stage_8" type="TextureButton" parent="."]
 margin_left = 422.0
 margin_top = 211.0
 margin_right = 2342.0
@@ -329,7 +334,7 @@ toggle_mode = true
 texture_normal = ExtResource( 28 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 09" type="TextureButton" parent="."]
+[node name="Stage_9" type="TextureButton" parent="."]
 margin_left = 604.0
 margin_top = 212.0
 margin_right = 2524.0
@@ -339,7 +344,7 @@ toggle_mode = true
 texture_normal = ExtResource( 32 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 10" type="TextureButton" parent="."]
+[node name="Stage_10" type="TextureButton" parent="."]
 margin_left = 786.0
 margin_top = 213.0
 margin_right = 2706.0
@@ -349,7 +354,7 @@ toggle_mode = true
 texture_normal = ExtResource( 33 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 11" type="TextureButton" parent="."]
+[node name="Stage_11" type="TextureButton" parent="."]
 margin_left = 61.9999
 margin_top = 316.0
 margin_right = 1982.0
@@ -359,7 +364,7 @@ toggle_mode = true
 texture_normal = ExtResource( 31 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 12" type="TextureButton" parent="."]
+[node name="Stage_12" type="TextureButton" parent="."]
 margin_left = 242.0
 margin_top = 314.0
 margin_right = 2162.0
@@ -369,7 +374,7 @@ toggle_mode = true
 texture_normal = ExtResource( 21 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 13" type="TextureButton" parent="."]
+[node name="Stage_13" type="TextureButton" parent="."]
 margin_left = 423.0
 margin_top = 314.0
 margin_right = 2343.0
@@ -379,7 +384,7 @@ toggle_mode = true
 texture_normal = ExtResource( 22 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 14" type="TextureButton" parent="."]
+[node name="Stage_14" type="TextureButton" parent="."]
 margin_left = 603.0
 margin_top = 314.0
 margin_right = 2523.0
@@ -389,7 +394,7 @@ toggle_mode = true
 texture_normal = ExtResource( 24 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 15" type="TextureButton" parent="."]
+[node name="Stage_15" type="TextureButton" parent="."]
 margin_left = 786.0
 margin_top = 316.0
 margin_right = 2706.0
@@ -399,7 +404,7 @@ toggle_mode = true
 texture_normal = ExtResource( 29 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 16" type="TextureButton" parent="."]
+[node name="Stage_16" type="TextureButton" parent="."]
 margin_left = 61.0
 margin_top = 419.0
 margin_right = 1981.0
@@ -409,7 +414,7 @@ toggle_mode = true
 texture_normal = ExtResource( 16 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 17" type="TextureButton" parent="."]
+[node name="Stage_17" type="TextureButton" parent="."]
 margin_left = 242.0
 margin_top = 420.0
 margin_right = 2162.0
@@ -419,7 +424,7 @@ toggle_mode = true
 texture_normal = ExtResource( 17 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 18" type="TextureButton" parent="."]
+[node name="Stage_18" type="TextureButton" parent="."]
 margin_left = 423.0
 margin_top = 420.0
 margin_right = 2343.0
@@ -429,7 +434,7 @@ toggle_mode = true
 texture_normal = ExtResource( 23 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 19" type="TextureButton" parent="."]
+[node name="Stage_19" type="TextureButton" parent="."]
 margin_left = 604.0
 margin_top = 420.0
 margin_right = 2524.0
@@ -439,7 +444,7 @@ toggle_mode = true
 texture_normal = ExtResource( 18 )
 texture_pressed = SubResource( 7 )
 
-[node name="Stage 20" type="TextureButton" parent="."]
+[node name="Stage_20" type="TextureButton" parent="."]
 margin_left = 787.0
 margin_top = 420.0
 margin_right = 2707.0
@@ -451,23 +456,5 @@ texture_pressed = SubResource( 7 )
 
 [connection signal="pressed" from="Aceptar" to="." method="_on_Aceptar_pressed"]
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
-[connection signal="toggled" from="Stage 01" to="." method="_on_Stage_01_toggled"]
-[connection signal="toggled" from="Stage 02" to="." method="_on_Stage_02_toggled"]
-[connection signal="toggled" from="Stage 03" to="." method="_on_Stage_03_toggled"]
-[connection signal="toggled" from="Stage 04" to="." method="_on_Stage_04_toggled"]
-[connection signal="toggled" from="Stage 05" to="." method="_on_Stage_05_toggled"]
-[connection signal="toggled" from="Stage 06" to="." method="_on_Stage_06_toggled"]
-[connection signal="toggled" from="Stage 07" to="." method="_on_Stage_07_toggled"]
-[connection signal="toggled" from="Stage 08" to="." method="_on_Stage_08_toggled"]
-[connection signal="toggled" from="Stage 09" to="." method="_on_Stage_09_toggled"]
-[connection signal="toggled" from="Stage 10" to="." method="_on_Stage_10_toggled"]
-[connection signal="toggled" from="Stage 11" to="." method="_on_Stage_11_toggled"]
-[connection signal="toggled" from="Stage 12" to="." method="_on_Stage_12_toggled"]
-[connection signal="toggled" from="Stage 13" to="." method="_on_Stage_13_toggled"]
-[connection signal="toggled" from="Stage 14" to="." method="_on_Stage_14_toggled"]
-[connection signal="toggled" from="Stage 15" to="." method="_on_Stage_15_toggled"]
-[connection signal="toggled" from="Stage 16" to="." method="_on_Stage_16_toggled"]
-[connection signal="toggled" from="Stage 17" to="." method="_on_Stage_17_toggled"]
-[connection signal="toggled" from="Stage 18" to="." method="_on_Stage_18_toggled"]
-[connection signal="toggled" from="Stage 19" to="." method="_on_Stage_19_toggled"]
-[connection signal="toggled" from="Stage 20" to="." method="_on_Stage_20_toggled"]
+[connection signal="pressed" from="Stage_01" to="." method="_on_Stage_01_pressed"]
+[connection signal="pressed" from="Stage_02" to="." method="_on_Stage_02_pressed"]

@@ -1,0 +1,120 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Escenas/Objetos/Portales/Portal_Exit.gd" type="Script" id=1]
+[ext_resource path="res://Escenas/Objetos/Portales/Portal_MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Portal_Sprites/Portal_Sprite.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 33.0
+height = 218.0
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 32, 48 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "girar",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 24, 70.5 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 96, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 32, 96, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 64, 96, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 96, 96, 32, 48 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "girar",
+"speed": 5.0
+} ]
+
+[node name="Portales" type="Node2D"]
+
+[node name="Portal_Exit" type="KinematicBody2D" parent="."]
+position = Vector2( -4, -7 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Exit"]
+position = Vector2( 964, 200 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Portal_Exit"]
+position = Vector2( 903.25, 185.5 )
+scale = Vector2( 4.57813, 3.52083 )
+frames = SubResource( 6 )
+animation = "girar"
+
+[node name="Area2D" type="Area2D" parent="Portal_Exit"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Exit/Area2D"]
+position = Vector2( 949, 194 )
+shape = SubResource( 7 )
+
+[node name="Portal_MainMenu" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -4 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_MainMenu"]
+position = Vector2( 71, 194 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Portal_MainMenu"]
+position = Vector2( 133.375, 180 )
+scale = Vector2( 4.47656, 3.625 )
+frames = SubResource( 12 )
+animation = "girar"
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="Portal_MainMenu"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_MainMenu/Area2D"]
+position = Vector2( 85, 193 )
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="Portal_Exit/Area2D" to="Portal_Exit" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Portal_MainMenu/Area2D" to="Portal_MainMenu" method="_on_Area2D_body_entered"]

@@ -21,3 +21,4 @@ func _on_Area2D_area_entered(area):
 	if area.is_in_group("Player"||"Girl_Player"):
 		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play("girar")
+

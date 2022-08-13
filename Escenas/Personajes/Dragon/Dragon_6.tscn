@@ -45,5 +45,5 @@ animation = "volar"
 frame = 1
 
 [node name="Portal" parent="Dragon_6" instance=ExtResource( 2 )]
-position = Vector2( -117, -395 )
+position = Vector2( -116, -402 )
 escena = "Level_6"
