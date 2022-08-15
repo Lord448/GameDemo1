@@ -40,5 +40,5 @@ animation = "girar"
 frame = 6
 
 [node name="Portal_Moneda" parent="Moneda_5" instance=ExtResource( 1 )]
-position = Vector2( -93, -59 )
+position = Vector2( -84, -61 )
 escena = "Level_6"

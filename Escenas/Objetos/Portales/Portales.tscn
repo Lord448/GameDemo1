@@ -37,7 +37,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 24, 70.5 )
+extents = Vector2( 24, 110.75 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
@@ -70,42 +70,36 @@ animations = [ {
 [node name="Portales" type="Node2D"]
 
 [node name="Portal_Exit" type="KinematicBody2D" parent="."]
-position = Vector2( -4, -7 )
+position = Vector2( 0, -8 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Exit"]
-position = Vector2( 964, 200 )
+position = Vector2( 1007, 164 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal_Exit"]
-position = Vector2( 903.25, 185.5 )
-scale = Vector2( 4.57813, 3.52083 )
+position = Vector2( 929.5, 138.5 )
+scale = Vector2( 6.21875, 5.47916 )
 frames = SubResource( 6 )
 animation = "girar"
 
 [node name="Area2D" type="Area2D" parent="Portal_Exit"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Exit/Area2D"]
-position = Vector2( 949, 194 )
+position = Vector2( 985, 146 )
 shape = SubResource( 7 )
 
 [node name="Portal_MainMenu" type="KinematicBody2D" parent="."]
 position = Vector2( 0, -4 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_MainMenu"]
-position = Vector2( 71, 194 )
+position = Vector2( 22, 157 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal_MainMenu"]
-position = Vector2( 133.375, 180 )
-scale = Vector2( 4.47656, 3.625 )
+position = Vector2( 103.5, 136 )
+scale = Vector2( 6.34375, 5.45833 )
 frames = SubResource( 12 )
 animation = "girar"
 flip_h = true
@@ -113,7 +107,7 @@ flip_h = true
 [node name="Area2D" type="Area2D" parent="Portal_MainMenu"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_MainMenu/Area2D"]
-position = Vector2( 85, 193 )
+position = Vector2( 46, 149 )
 shape = SubResource( 7 )
 
 [connection signal="body_entered" from="Portal_Exit/Area2D" to="Portal_Exit" method="_on_Area2D_body_entered"]

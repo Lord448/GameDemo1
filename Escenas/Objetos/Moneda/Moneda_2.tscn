@@ -34,12 +34,12 @@ position = Vector2( 105.75, -86 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Moneda_2"]
-position = Vector2( 145.5, -113.5 )
+position = Vector2( 114, -111 )
 scale = Vector2( 0.33, 0.33 )
 frames = SubResource( 5 )
 animation = "girar"
 frame = 4
 
 [node name="Portal_Moneda" parent="Moneda_2" instance=ExtResource( 2 )]
-position = Vector2( -20, -68 )
+position = Vector2( -4, -113 )
 escena = "Level_3"

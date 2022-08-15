@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Escenas/Menus/Characters_Menu_Arcade.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=2]
@@ -13,8 +13,10 @@
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=11]
 [ext_resource path="res://Tiles/Tile_13.png" type="Texture" id=12]
 [ext_resource path="res://Tiles/Tile_22.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Link Sprites/final-0001.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Female Sprites/1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Female Sprites/Girl_front_pressed.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Link Sprites/Boy_front_pressed.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Link Sprites/Boy_front.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Female Sprites/Girl_front.png" type="Texture" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -206,10 +208,10 @@ custom_fonts/font = SubResource( 2 )
 text = "Selecciona Personaje"
 
 [node name="Regresar" type="Button" parent="."]
-margin_left = 423.0
-margin_top = 468.0
-margin_right = 606.0
-margin_bottom = 520.0
+margin_left = 430.0
+margin_top = 457.0
+margin_right = 613.0
+margin_bottom = 509.0
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -218,21 +220,22 @@ text = "Regresar"
 flat = true
 
 [node name="Control" type="Control" parent="."]
-margin_left = 266.0
-margin_top = 212.0
-margin_right = 760.0
-margin_bottom = 412.0
+margin_left = 271.0
+margin_top = 200.0
+margin_right = 765.0
+margin_bottom = 400.0
 
 [node name="Boy Player" type="TextureButton" parent="Control"]
 anchor_left = 0.667
 anchor_top = 0.5
 anchor_right = 0.667
 anchor_bottom = 0.5
-margin_left = -154.498
-margin_top = -141.0
-margin_right = 313.502
-margin_bottom = 139.0
-texture_normal = ExtResource( 14 )
+margin_left = -1.49799
+margin_top = -142.0
+margin_right = 128.502
+margin_bottom = 156.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
 expand = true
 
 [node name="Girl Player" type="TextureButton" parent="Control"]
@@ -240,11 +243,12 @@ anchor_left = 0.667
 anchor_top = 0.5
 anchor_right = 0.667
 anchor_bottom = 0.5
-margin_left = -483.498
-margin_top = -136.0
-margin_right = 0.502014
-margin_bottom = 140.0
-texture_normal = ExtResource( 15 )
+margin_left = -296.498
+margin_top = -128.0
+margin_right = -163.498
+margin_bottom = 148.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 14 )
 expand = true
 
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
