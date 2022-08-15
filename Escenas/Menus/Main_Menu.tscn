@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Escenas/Menus/Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=2]
@@ -12,31 +12,8 @@
 [ext_resource path="res://Tiles/Tile_11.png" type="Texture" id=10]
 [ext_resource path="res://Tiles/Tile_21.png" type="Texture" id=11]
 [ext_resource path="res://Tiles/Tile_22.png" type="Texture" id=12]
-[ext_resource path="res://Tiles/tree.png" type="Texture" id=13]
+[ext_resource path="res://Assets/BG_Main_Manu.png" type="Texture" id=13]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=14]
-[ext_resource path="res://Tiles/Clouds.png" type="Texture" id=16]
-
-[sub_resource type="TileSet" id=7]
-0/name = "Clouds.png 0"
-0/texture = ExtResource( 16 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 768, 224 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="DynamicFont" id=2]
-size = 100
-outline_size = 8
-outline_color = Color( 0.0352941, 0.027451, 0.027451, 1 )
-font_data = ExtResource( 2 )
 
 [sub_resource type="TileSet" id=4]
 0/name = "hyptosis_tile-art-batch-1.png 0"
@@ -182,21 +159,11 @@ font_data = ExtResource( 2 )
 8/shapes = [  ]
 8/z_index = 0
 
-[sub_resource type="TileSet" id=6]
-0/name = "tree.png 0"
-0/texture = ExtResource( 13 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( -3, 0, 181, 213 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
+[sub_resource type="DynamicFont" id=2]
+size = 100
+outline_size = 8
+outline_color = Color( 0.0352941, 0.027451, 0.027451, 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 38
@@ -207,30 +174,13 @@ font_data = ExtResource( 3 )
 [node name="Main_Menu" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_top = 371.0
-margin_right = 1023.0
-margin_bottom = 586.0
-color = Color( 0.203922, 0.4, 0.180392, 1 )
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_right = 1022.0
-margin_bottom = 372.0
-color = Color( 0.239216, 0.815686, 0.94902, 1 )
-
-[node name="Nubes" type="TileMap" parent="."]
-tile_set = SubResource( 7 )
-cell_size = Vector2( 3, 5 )
-format = 1
-tile_data = PoolIntArray( 262155, 1, 0, 393240, 2, 0, 589861, 0, 0 )
-
-[node name="Titulo" type="Label" parent="."]
-margin_left = 325.0
-margin_top = 76.0
-margin_right = 681.0
-margin_bottom = 173.0
-custom_fonts/font = SubResource( 2 )
-text = "Level Up!"
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 118.0
+margin_top = 61.0
+margin_right = 955.0
+margin_bottom = 533.0
+texture = ExtResource( 13 )
+expand = true
 
 [node name="Subtitulos" type="TileMap" parent="."]
 tile_set = SubResource( 4 )
@@ -244,11 +194,13 @@ cell_size = Vector2( 31, 31 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 32, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 7, 0, 65541, 7, 0, 65542, 7, 0, 65543, 7, 0, 65544, 7, 0, 65545, 7, 0, 65546, 7, 0, 65547, 7, 0, 65548, 7, 0, 65549, 7, 0, 65550, 7, 0, 65551, 7, 0, 65552, 7, 0, 65553, 7, 0, 65554, 7, 0, 65555, 7, 0, 65556, 7, 0, 65557, 7, 0, 65558, 7, 0, 65559, 7, 0, 65560, 7, 0, 65561, 7, 0, 65562, 7, 0, 65563, 7, 0, 65564, 7, 0, 65565, 4, 0, 65566, 4, 0, 65567, 4, 0, 65568, 5, 0, 131072, 3, 0, 131073, 4, 0, 131074, 4, 0, 131075, 5, 0, 131101, 3, 0, 131102, 4, 0, 131103, 4, 0, 131104, 5, 0, 196608, 3, 0, 196609, 4, 0, 196610, 4, 0, 196611, 5, 0, 196637, 3, 0, 196638, 4, 0, 196639, 4, 0, 196640, 5, 0, 262144, 3, 0, 262145, 4, 0, 262146, 4, 0, 262147, 5, 0, 262173, 3, 0, 262174, 4, 0, 262175, 4, 0, 262176, 5, 0, 327680, 3, 0, 327681, 4, 0, 327682, 4, 0, 327683, 5, 0, 327709, 3, 0, 327710, 4, 0, 327711, 4, 0, 327712, 5, 0, 393216, 3, 0, 393217, 4, 0, 393218, 4, 0, 393219, 5, 0, 393245, 3, 0, 393246, 4, 0, 393247, 4, 0, 393248, 5, 0, 458752, 3, 0, 458753, 4, 0, 458754, 4, 0, 458755, 5, 0, 458781, 3, 0, 458782, 4, 0, 458783, 4, 0, 458784, 5, 0, 524288, 3, 0, 524289, 4, 0, 524290, 4, 0, 524291, 5, 0, 524317, 3, 0, 524318, 4, 0, 524319, 4, 0, 524320, 5, 0, 589824, 3, 0, 589825, 4, 0, 589826, 4, 0, 589827, 5, 0, 589853, 3, 0, 589854, 4, 0, 589855, 4, 0, 589856, 5, 0, 655360, 3, 0, 655361, 4, 0, 655362, 4, 0, 655363, 5, 0, 655389, 3, 0, 655390, 4, 0, 655391, 4, 0, 655392, 5, 0, 720896, 3, 0, 720897, 4, 0, 720898, 4, 0, 720899, 5, 0, 720925, 3, 0, 720926, 4, 0, 720927, 4, 0, 720928, 5, 0, 786432, 3, 0, 786433, 4, 0, 786434, 4, 0, 786435, 5, 0, 786461, 3, 0, 786462, 4, 0, 786463, 4, 0, 786464, 5, 0, 851968, 3, 0, 851969, 4, 0, 851970, 4, 0, 851971, 5, 0, 851997, 3, 0, 851998, 4, 0, 851999, 4, 0, 852000, 5, 0, 917504, 3, 0, 917505, 4, 0, 917506, 4, 0, 917507, 5, 0, 917533, 3, 0, 917534, 4, 0, 917535, 4, 0, 917536, 5, 0, 983040, 3, 0, 983041, 4, 0, 983042, 4, 0, 983043, 5, 0, 983069, 3, 0, 983070, 4, 0, 983071, 4, 0, 983072, 5, 0, 1048576, 3, 0, 1048577, 4, 0, 1048578, 4, 0, 1048579, 5, 0, 1048605, 3, 0, 1048606, 4, 0, 1048607, 4, 0, 1048608, 5, 0, 1114112, 3, 0, 1114113, 4, 0, 1114114, 4, 0, 1114115, 4, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 4, 0, 1114142, 4, 0, 1114143, 4, 0, 1114144, 5, 0, 1179648, 6, 0, 1179649, 7, 0, 1179650, 7, 0, 1179651, 7, 0, 1179652, 7, 0, 1179653, 7, 0, 1179654, 7, 0, 1179655, 7, 0, 1179656, 7, 0, 1179657, 7, 0, 1179658, 7, 0, 1179659, 7, 0, 1179660, 7, 0, 1179661, 7, 0, 1179662, 7, 0, 1179663, 7, 0, 1179664, 7, 0, 1179665, 7, 0, 1179666, 7, 0, 1179667, 7, 0, 1179668, 7, 0, 1179669, 7, 0, 1179670, 7, 0, 1179671, 7, 0, 1179672, 7, 0, 1179673, 7, 0, 1179674, 7, 0, 1179675, 7, 0, 1179676, 7, 0, 1179677, 7, 0, 1179678, 7, 0, 1179679, 7, 0, 1179680, 8, 0 )
 
-[node name="Arboles" type="TileMap" parent="."]
-tile_set = SubResource( 6 )
-cell_size = Vector2( 31, 33 )
-format = 1
-tile_data = PoolIntArray( 458758, 0, 0, 458773, 0, 0, 851976, 2, 0 )
+[node name="Titulo" type="Label" parent="."]
+margin_left = 325.0
+margin_top = 76.0
+margin_right = 681.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 2 )
+text = "Level Up!"
 
 [node name="Jugar" type="Button" parent="."]
 margin_left = 412.0

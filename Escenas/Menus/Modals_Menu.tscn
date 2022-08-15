@@ -239,7 +239,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Regresar"
 flat = true
 
-[connection signal="pressed" from="Historia" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Arcade" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="Salir" to="." method="_on_Button3_pressed"]
-[connection signal="pressed" from="Regresar" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Historia" to="." method="_on_Historia_pressed"]
+[connection signal="pressed" from="Arcade" to="." method="_on_Arcade_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
