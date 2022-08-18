@@ -3,27 +3,30 @@ extends Node2D
 var Escenario: String
 
 func _ready():
-	pass
-
+	$Advertencia.visible = false
+	Gamehandler.Stage = ""
 
 func _on_Aceptar_pressed():
-		get_tree().change_scene("res://Escenas/Menus/Characters_Menu_Arcade.tscn")
-#NO BORRAR------------------------------------
-#func _on_Aceptar_pressed():
-#	if Gamehandler.Stage != null:
-#		get_tree().change_scene(Gamehandler.Stage)
-#	else:
-#		pass
-#---------------------------------------------
+	if Gamehandler.Stage == "":
+		$Advertencia.visible = true
+	else:
+		get_tree().change_scene(Gamehandler.Stage)
+
 func _on_Regresar_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn")
+	get_tree().change_scene("res://Escenas/Menus/Characters_Menu_Arcade.tscn")
 
 func _on_Stage_1_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
-		get_node("Stage_" + String(i)).pressed = false
+		Escenario = "Stage_" + String(i)
+		if Escenario == "Stage_1":
+			pass
+		else:
+			get_node(Escenario).pressed = false
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_01.tscn"
 
 func _on_Stage_2_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_2":
@@ -33,6 +36,7 @@ func _on_Stage_2_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_02.tscn"
 
 func _on_Stage_3_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_3":
@@ -42,6 +46,7 @@ func _on_Stage_3_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_03.tscn"
 
 func _on_Stage_4_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_4":
@@ -51,6 +56,7 @@ func _on_Stage_4_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_04.tscn"
 
 func _on_Stage_5_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_5":
@@ -60,6 +66,7 @@ func _on_Stage_5_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_05.tscn"
 
 func _on_Stage_6_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_6":
@@ -69,6 +76,7 @@ func _on_Stage_6_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_06.tscn"
 
 func _on_Stage_7_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_7":
@@ -78,6 +86,7 @@ func _on_Stage_7_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_07.tscn"
 
 func _on_Stage_8_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_8":
@@ -87,6 +96,7 @@ func _on_Stage_8_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_08.tscn"
 
 func _on_Stage_9_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_9":
@@ -96,6 +106,7 @@ func _on_Stage_9_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_09.tscn"
 
 func _on_Stage_10_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_10":
@@ -105,6 +116,7 @@ func _on_Stage_10_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_10.tscn"
 	
 func _on_Stage_11_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_11":
@@ -114,6 +126,7 @@ func _on_Stage_11_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_11.tscn"
 
 func _on_Stage_12_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_12":
@@ -123,6 +136,7 @@ func _on_Stage_12_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_12.tscn"
 
 func _on_Stage_13_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_13":
@@ -132,6 +146,7 @@ func _on_Stage_13_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_13.tscn"
 
 func _on_Stage_14_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_14":
@@ -141,6 +156,7 @@ func _on_Stage_14_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_14.tscn"
 
 func _on_Stage_15_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_15":
@@ -150,6 +166,7 @@ func _on_Stage_15_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_15.tscn"
 
 func _on_Stage_16_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_16":
@@ -159,6 +176,7 @@ func _on_Stage_16_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_16.tscn"
 
 func _on_Stage_17_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_17":
@@ -168,6 +186,7 @@ func _on_Stage_17_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_17.tscn"
 
 func _on_Stage_18_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_18":
@@ -177,6 +196,7 @@ func _on_Stage_18_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_18.tscn"
 
 func _on_Stage_19_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_19":
@@ -186,6 +206,7 @@ func _on_Stage_19_pressed():
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_19.tscn"
 
 func _on_Stage_20_pressed():
+	$Advertencia.visible = false
 	for i in range(1,20):
 		Escenario = "Stage_" + String(i)
 		if Escenario == "Stage_20":

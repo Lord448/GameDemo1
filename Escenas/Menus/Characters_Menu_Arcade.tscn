@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Escenas/Menus/Characters_Menu_Arcade.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=2]
@@ -170,6 +170,14 @@ font_data = ExtResource( 2 )
 size = 38
 font_data = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 39
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 36
+font_data = ExtResource( 3 )
+
 [node name="Characters_Menu_Arcade" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -208,15 +216,25 @@ custom_fonts/font = SubResource( 2 )
 text = "Selecciona Personaje"
 
 [node name="Regresar" type="Button" parent="."]
-margin_left = 430.0
-margin_top = 457.0
-margin_right = 613.0
-margin_bottom = 509.0
+margin_left = 214.0
+margin_top = 458.0
+margin_right = 397.0
+margin_bottom = 510.0
+rect_pivot_offset = Vector2( -761, -229 )
 custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Regresar"
+flat = true
+
+[node name="Aceptar" type="Button" parent="."]
+margin_left = 651.0
+margin_top = 462.0
+margin_right = 810.0
+margin_bottom = 506.0
+custom_fonts/font = SubResource( 6 )
+text = "Aceptar"
 flat = true
 
 [node name="Control" type="Control" parent="."]
@@ -230,9 +248,9 @@ anchor_left = 0.667
 anchor_top = 0.5
 anchor_right = 0.667
 anchor_bottom = 0.5
-margin_left = -1.49799
+margin_left = 41.502
 margin_top = -142.0
-margin_right = 128.502
+margin_right = 171.502
 margin_bottom = 156.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 15 )
@@ -243,14 +261,25 @@ anchor_left = 0.667
 anchor_top = 0.5
 anchor_right = 0.667
 anchor_bottom = 0.5
-margin_left = -296.498
-margin_top = -128.0
-margin_right = -163.498
-margin_bottom = 148.0
+margin_left = -343.498
+margin_top = -129.0
+margin_right = -210.498
+margin_bottom = 147.0
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 14 )
 expand = true
 
+[node name="Advertencia" type="Label" parent="."]
+margin_left = 395.0
+margin_top = 293.0
+margin_right = 639.0
+margin_bottom = 329.0
+custom_fonts/font = SubResource( 7 )
+text = "Selecciona uno!"
+
+[connection signal="ready" from="." to="." method="_on_Characters_Menu_Arcade_ready"]
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
+[connection signal="pressed" from="Aceptar" to="." method="_on_Aceptar_pressed"]
 [connection signal="pressed" from="Control/Boy Player" to="." method="_on_Boy_Player_pressed"]
+[connection signal="toggled" from="Control/Boy Player" to="." method="_on_Boy_Player_toggled"]
 [connection signal="pressed" from="Control/Girl Player" to="." method="_on_Girl_Player_pressed"]
