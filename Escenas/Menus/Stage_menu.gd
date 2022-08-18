@@ -17,10 +17,8 @@ func _on_Aceptar_pressed():
 func _on_Regresar_pressed():
 	get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn")
 
-func _on_Stage_01_pressed():
-	$Stage_02.pressed = false
+func _on_Stage_1_pressed():
+	for i in range(1,20):
+		get_node("Stage_" + String(i)).pressed = false
+	#$Stage_02.pressed = false
 	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_01.tscn"
-
-func _on_Stage_02_pressed():
-	$Stage_01.pressed = false
-	Gamehandler.Stage = "res://Escenas/Niveles/Niveles_Arcade/Stage_02.tscn"

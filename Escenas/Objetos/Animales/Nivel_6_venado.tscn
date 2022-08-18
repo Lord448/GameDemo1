@@ -1,0 +1,56 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0025.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0017.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0009.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0005.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0023.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0003.png" type="Texture" id=6]
+[ext_resource path="res://Escenas/Objetos/Animales/Portal_Moneda_final.gd" type="Script" id=7]
+[ext_resource path="res://Escenas/Objetos/Animales/Animales_correr.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0021.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0011.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0013.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0007.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0015.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0001.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Moneda_Sprites/Venado/final-0019.png" type="Texture" id=15]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 74.125, 59.25 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 15 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "girar",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 58.5, 47.5 )
+
+[node name="Venado_nivel6" type="Node2D"]
+
+[node name="Venado_nivel6" type="KinematicBody2D" parent="."]
+position = Vector2( 117, 304 )
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Venado_nivel6"]
+position = Vector2( 18.875, 15.75 )
+shape = SubResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Venado_nivel6"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 5 )
+animation = "girar"
+frame = 9
+
+[node name="Portal_Moneda_final" type="Area2D" parent="Venado_nivel6"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Venado_nivel6/Portal_Moneda_final"]
+position = Vector2( -15, 17 )
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="Venado_nivel6/Portal_Moneda_final" to="Venado_nivel6/Portal_Moneda_final" method="_on_Portal_Moneda_final_body_entered"]

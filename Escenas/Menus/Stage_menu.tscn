@@ -253,7 +253,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Regresar"
 flat = true
 
-[node name="Stage_01" type="TextureButton" parent="."]
+[node name="Stage_1" type="TextureButton" parent="."]
 margin_left = 61.0
 margin_top = 109.0
 margin_right = 1981.0
@@ -264,7 +264,7 @@ action_mode = 0
 texture_normal = ExtResource( 13 )
 texture_pressed = SubResource( 12 )
 
-[node name="Stage_02" type="TextureButton" parent="."]
+[node name="Stage_2" type="TextureButton" parent="."]
 margin_left = 242.0
 margin_top = 109.0
 margin_right = 2162.0
@@ -456,5 +456,4 @@ texture_pressed = SubResource( 7 )
 
 [connection signal="pressed" from="Aceptar" to="." method="_on_Aceptar_pressed"]
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
-[connection signal="pressed" from="Stage_01" to="." method="_on_Stage_01_pressed"]
-[connection signal="pressed" from="Stage_02" to="." method="_on_Stage_02_pressed"]
+[connection signal="pressed" from="Stage_1" to="." method="_on_Stage_1_pressed"]

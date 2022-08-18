@@ -1,0 +1,44 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Escenas/Objetos/Animales/Portal_Moneda.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas/Objetos/Animales/Animales_correr.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0011.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0005.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0009.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0003.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0017.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0001.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0007.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0013.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Moneda_Sprites/Camello/final-0015.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 122.25, 128 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "correr",
+"speed": 13.0
+} ]
+
+[node name="Camello_nivel2" type="Node2D"]
+
+[node name="Camello_nivel2" type="KinematicBody2D" parent="."]
+position = Vector2( 107, 308 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camello_nivel2"]
+position = Vector2( 105.75, -86 )
+shape = SubResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Camello_nivel2"]
+position = Vector2( 114, -111 )
+scale = Vector2( 0.33, 0.33 )
+frames = SubResource( 5 )
+animation = "correr"
+
+[node name="Portal_Moneda" parent="Camello_nivel2" instance=ExtResource( 1 )]
+position = Vector2( -4, -113 )
+escena = "Level_3"
