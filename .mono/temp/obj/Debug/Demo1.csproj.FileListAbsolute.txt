@@ -1,0 +1,9 @@
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\bin\Debug\Demo1.dll
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\bin\Debug\Demo1.pdb
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.csproj.AssemblyReference.cache
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.AssemblyInfoInputs.cache
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.AssemblyInfo.cs
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.csproj.CoreCompileInputs.cache
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.dll
+D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.pdb
