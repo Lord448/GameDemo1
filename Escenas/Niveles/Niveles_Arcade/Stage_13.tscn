@@ -1,25 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/sky.png" type="Texture" id=1]
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/clouds_1.png" type="Texture" id=2]
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/ground_3.png" type="Texture" id=3]
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/plant.png" type="Texture" id=4]
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/rocks.png" type="Texture" id=5]
-[ext_resource path="res://Escenas/Personajes/Player/Player_Arcade.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Escenas/Niveles/Player Selected.gd" type="Script" id=6]
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/ground_1.png" type="Texture" id=7]
-[ext_resource path="res://Escenas/Niveles/Niveles_Arcade/Stage_02.gd" type="Script" id=8]
 [ext_resource path="res://Paisajes/Naturista/Naturista_3/layers/ground_2.png" type="Texture" id=9]
 
-[node name="Desierto" type="Node2D"]
-script = ExtResource( 8 )
-
-[node name="PlayerOfi" parent="." instance=ExtResource( 6 )]
-position = Vector2( 268, 208 )
-
-[node name="Camera2D" type="Camera2D" parent="PlayerOfi"]
-position = Vector2( 244, -207 )
-scale = Vector2( 0.932291, 1.1032 )
-current = true
+[node name="Stage_13" type="Node2D"]
 
 [node name="Parallax" type="Node2D" parent="."]
 
@@ -94,3 +84,9 @@ position = Vector2( 0, -303 )
 scale = Vector2( 0.533333, 0.555556 )
 texture = ExtResource( 4 )
 centered = false
+
+[node name="Player Selected" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="position_player" type="Position2D" parent="Player Selected"]
+position = Vector2( 479, 193 )
