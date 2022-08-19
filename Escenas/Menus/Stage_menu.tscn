@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Tiles/Tile_23.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Tile_12.png" type="Texture" id=2]
@@ -33,6 +33,26 @@
 [ext_resource path="res://Paisajes/Invierno/Invierno_2/BG_02.png" type="Texture" id=31]
 [ext_resource path="res://Paisajes/Fantasía/Fantasía_3/background.png" type="Texture" id=32]
 [ext_resource path="res://Paisajes/Infantil/Infantil_3/platformer_background_3.png" type="Texture" id=33]
+[ext_resource path="res://Paisajes/Desierto/Desierto_3/Pressed_background_desierto02.png" type="Texture" id=34]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_1/Pressed_background_fantasia01.png" type="Texture" id=35]
+[ext_resource path="res://Paisajes/Naturista/Naturista_4/Pressed_game_background_4.png" type="Texture" id=36]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_4/Pressed_background_fantasia03.png" type="Texture" id=37]
+[ext_resource path="res://Paisajes/Desierto/Desierto_1/Pressed_background_desierto01.png" type="Texture" id=38]
+[ext_resource path="res://Paisajes/Naturista/Naturista_1/Pressed_game_background_1.png" type="Texture" id=39]
+[ext_resource path="res://Paisajes/Naturista/Naturista_2/Pressed_game_background_2.png" type="Texture" id=40]
+[ext_resource path="res://Paisajes/Bosque/Bosque_01/Pressed_Cartoon_Forest_BG_01.png" type="Texture" id=41]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_3/Pressed_background_invierno.png" type="Texture" id=42]
+[ext_resource path="res://Paisajes/Invierno/Invierno_3/Pressed_BG_03.png" type="Texture" id=43]
+[ext_resource path="res://Paisajes/Infantil/Infantil_1/Pressed_platformer_background_1.png" type="Texture" id=44]
+[ext_resource path="res://Paisajes/Infantil/Infantil_4/Pressed_platformer_background_3.png" type="Texture" id=45]
+[ext_resource path="res://Paisajes/Infantil/Infantil_3/Pressed_platformer_background_2.png" type="Texture" id=46]
+[ext_resource path="res://Paisajes/Bosque/Bosque_03/Pressed_Cartoon_Forest_BG_04.png" type="Texture" id=47]
+[ext_resource path="res://Paisajes/Desierto/Desierto_2/Pressed_background_desierto03.png" type="Texture" id=48]
+[ext_resource path="res://Paisajes/Bosque/Bosque_02/Pressed_Cartoon_Forest_BG_02.png" type="Texture" id=49]
+[ext_resource path="res://Paisajes/Fantasía/Fantasía_2/Pressed_background_fantasia02.png" type="Texture" id=50]
+[ext_resource path="res://Paisajes/Naturista/Naturista_3/Pressed_game_background_3. 2.png" type="Texture" id=51]
+[ext_resource path="res://Paisajes/Invierno/Invierno_2/Pressed_BG_02.png" type="Texture" id=52]
+[ext_resource path="res://Paisajes/Invierno/Invierno_1/Pressed_BG_01.png" type="Texture" id=53]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -186,18 +206,6 @@ font_data = ExtResource( 11 )
 size = 38
 font_data = ExtResource( 10 )
 
-[sub_resource type="Gradient" id=11]
-
-[sub_resource type="GradientTexture" id=12]
-gradient = SubResource( 11 )
-
-[sub_resource type="Gradient" id=6]
-offsets = PoolRealArray( 0, 0.0628571, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 0.0628571, 0.0628571, 0.0628571, 1, 1, 1, 1, 1 )
-
-[sub_resource type="GradientTexture" id=7]
-gradient = SubResource( 6 )
-
 [sub_resource type="DynamicFont" id=13]
 size = 31
 font_data = ExtResource( 11 )
@@ -266,7 +274,7 @@ rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource( 13 )
-texture_pressed = SubResource( 12 )
+texture_pressed = ExtResource( 41 )
 
 [node name="Stage_2" type="TextureButton" parent="."]
 margin_left = 242.0
@@ -276,7 +284,7 @@ margin_bottom = 1189.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 14 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 48 )
 
 [node name="Stage_3" type="TextureButton" parent="."]
 margin_left = 422.0
@@ -286,7 +294,7 @@ margin_bottom = 1188.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 20 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 35 )
 
 [node name="Stage_4" type="TextureButton" parent="."]
 margin_left = 603.0
@@ -296,7 +304,7 @@ margin_bottom = 1189.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 19 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 44 )
 
 [node name="Stage_5" type="TextureButton" parent="."]
 margin_left = 787.0
@@ -306,7 +314,7 @@ margin_bottom = 1190.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 26 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 53 )
 
 [node name="Stage_6" type="TextureButton" parent="."]
 margin_left = 61.0
@@ -316,7 +324,7 @@ margin_bottom = 1293.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 27 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 39 )
 
 [node name="Stage_7" type="TextureButton" parent="."]
 margin_left = 242.0
@@ -326,7 +334,7 @@ margin_bottom = 1290.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 25 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 49 )
 
 [node name="Stage_8" type="TextureButton" parent="."]
 margin_left = 422.0
@@ -336,7 +344,7 @@ margin_bottom = 1291.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 28 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 38 )
 
 [node name="Stage_9" type="TextureButton" parent="."]
 margin_left = 604.0
@@ -346,7 +354,7 @@ margin_bottom = 1292.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 32 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 42 )
 
 [node name="Stage_10" type="TextureButton" parent="."]
 margin_left = 786.0
@@ -356,7 +364,7 @@ margin_bottom = 1293.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 33 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 46 )
 
 [node name="Stage_11" type="TextureButton" parent="."]
 margin_left = 61.9999
@@ -366,7 +374,7 @@ margin_bottom = 1396.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 31 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 52 )
 
 [node name="Stage_12" type="TextureButton" parent="."]
 margin_left = 242.0
@@ -376,7 +384,7 @@ margin_bottom = 1394.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 21 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 40 )
 
 [node name="Stage_13" type="TextureButton" parent="."]
 margin_left = 423.0
@@ -386,7 +394,7 @@ margin_bottom = 1394.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 22 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 51 )
 
 [node name="Stage_14" type="TextureButton" parent="."]
 margin_left = 603.0
@@ -396,7 +404,7 @@ margin_bottom = 1394.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 24 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 47 )
 
 [node name="Stage_15" type="TextureButton" parent="."]
 margin_left = 786.0
@@ -406,7 +414,7 @@ margin_bottom = 1396.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 29 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 34 )
 
 [node name="Stage_16" type="TextureButton" parent="."]
 margin_left = 61.0
@@ -416,7 +424,7 @@ margin_bottom = 1499.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 16 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 37 )
 
 [node name="Stage_17" type="TextureButton" parent="."]
 margin_left = 242.0
@@ -426,7 +434,7 @@ margin_bottom = 1500.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 17 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 45 )
 
 [node name="Stage_18" type="TextureButton" parent="."]
 margin_left = 423.0
@@ -436,7 +444,7 @@ margin_bottom = 1500.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 23 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 36 )
 
 [node name="Stage_19" type="TextureButton" parent="."]
 margin_left = 604.0
@@ -446,7 +454,7 @@ margin_bottom = 1500.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 18 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 50 )
 
 [node name="Stage_20" type="TextureButton" parent="."]
 margin_left = 787.0
@@ -456,7 +464,7 @@ margin_bottom = 1500.0
 rect_scale = Vector2( 0.09, 0.09 )
 toggle_mode = true
 texture_normal = ExtResource( 30 )
-texture_pressed = SubResource( 7 )
+texture_pressed = ExtResource( 43 )
 
 [node name="Advertencia" type="Label" parent="."]
 margin_left = 282.0

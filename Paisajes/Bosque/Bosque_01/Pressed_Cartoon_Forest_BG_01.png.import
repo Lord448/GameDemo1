@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/game_background_3. 2.png-b5b9096d121d4b117cba5b8fae61fc56.stex"
+path="res://.import/Pressed_Cartoon_Forest_BG_01.png-d892a0ca420f384f48a20a08321b5957.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Paisajes/Naturista/Naturista_3/game_background_3. 2.png"
-dest_files=[ "res://.import/game_background_3. 2.png-b5b9096d121d4b117cba5b8fae61fc56.stex" ]
+source_file="res://Paisajes/Bosque/Bosque_01/Pressed_Cartoon_Forest_BG_01.png"
+dest_files=[ "res://.import/Pressed_Cartoon_Forest_BG_01.png-d892a0ca420f384f48a20a08321b5957.stex" ]
 
 [params]
 
