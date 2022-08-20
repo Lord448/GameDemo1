@@ -175,7 +175,6 @@ size = 29
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 22
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=6]
@@ -316,10 +315,10 @@ rect_pivot_offset = Vector2( 16, 14 )
 text = "+"
 
 [node name="Dificultad" type="Control" parent="."]
-margin_left = -144.0
-margin_top = 108.0
-margin_right = -104.0
-margin_bottom = 148.0
+margin_left = -164.0
+margin_top = 104.0
+margin_right = -124.0
+margin_bottom = 144.0
 
 [node name="LabelDifi" type="Label" parent="Dificultad"]
 margin_left = 586.0
@@ -329,13 +328,13 @@ margin_bottom = 222.0
 custom_fonts/font = SubResource( 2 )
 text = "Dificultad"
 
-[node name="LineEditVel" type="LineEdit" parent="Dificultad"]
-margin_left = 594.0
+[node name="LineEditDif" type="LineEdit" parent="Dificultad"]
+margin_left = 592.0
 margin_top = 232.0
-margin_right = 700.0
+margin_right = 714.0
 margin_bottom = 283.0
 custom_fonts/font = SubResource( 3 )
-text = "Fácil"
+text = "Facil"
 align = 1
 
 [node name="Botones" type="Control" parent="Dificultad"]
@@ -349,31 +348,31 @@ margin_right = 650.16
 margin_bottom = 239.0
 
 [node name="Subirdif" type="Button" parent="Dificultad/Botones"]
-margin_left = 21.0
-margin_right = 51.0
+margin_left = 37.0
+margin_right = 67.0
 margin_bottom = 20.0
 text = "+"
 
 [node name="Bajardif" type="Button" parent="Dificultad/Botones"]
-margin_left = 21.0
-margin_top = 24.0
-margin_right = 51.0
-margin_bottom = 44.0
+margin_left = 37.0
+margin_top = 23.0
+margin_right = 67.0
+margin_bottom = 43.0
 text = "-"
 
 [node name="MasVel" type="Label" parent="."]
-margin_left = 522.0
-margin_top = 314.0
-margin_right = 756.0
-margin_bottom = 342.0
+margin_left = 592.0
+margin_top = 285.0
+margin_right = 759.0
+margin_bottom = 307.0
 custom_fonts/font = SubResource( 5 )
 align = 1
 
 [node name="MasPre" type="Label" parent="."]
-margin_left = 292.0
-margin_top = 312.0
-margin_right = 492.0
-margin_bottom = 340.0
+margin_left = 290.0
+margin_top = 307.0
+margin_right = 392.0
+margin_bottom = 335.0
 custom_fonts/font = SubResource( 6 )
 align = 1
 
@@ -385,6 +384,5 @@ align = 1
 [connection signal="text_changed" from="Presiones/LineEditPre" to="." method="_on_LineEditPre_text_changed"]
 [connection signal="pressed" from="Presiones/Botones/BajarPre" to="." method="_on_BajarPre_pressed"]
 [connection signal="pressed" from="Presiones/Botones/SubirPre" to="." method="_on_SubirPre_pressed"]
-[connection signal="text_changed" from="Dificultad/LineEditVel" to="." method="_on_LineEditVel_text_changed"]
-[connection signal="pressed" from="Dificultad/Botones/Subirdif" to="." method="_on_SubirVel_pressed"]
-[connection signal="pressed" from="Dificultad/Botones/Bajardif" to="." method="_on_BajarVel_pressed"]
+[connection signal="pressed" from="Dificultad/Botones/Subirdif" to="." method="_on_Subirdif_pressed"]
+[connection signal="pressed" from="Dificultad/Botones/Bajardif" to="." method="_on_Bajardif_pressed"]

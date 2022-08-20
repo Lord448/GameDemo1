@@ -15,7 +15,8 @@ var Velocidad = Gamehandler.Velocidad
 #Timers
 var timer = Timer.new()
 var timer_restore = Timer.new()
-var duracion = 0.002
+var final_timer = Timer.new()
+var duracion
 var delay_time = 5
 #Booleans
 var aparece: bool = false
@@ -25,6 +26,7 @@ var giro: bool = true
 func _ready():
 	victoria.visible = false
 	limite=get_viewport_rect().size
+	Calculo_tiempos()
 	#First timer
 	add_child(timer)
 	timer.set_one_shot(false)
@@ -36,6 +38,11 @@ func _ready():
 	timer_restore.set_one_shot(true)
 	timer_restore.set_wait_time(delay_time)
 	timer_restore.connect("timeout", self, "restore_vel")
+	#Third timer
+	add_child(final_timer)
+	final_timer.set_one_shot(true)
+	final_timer.set_wait_time(delay_time)
+	final_timer.connect("timeout", self, "final_anim")
 
 func _physics_process(_delta):
 	direccion.x = Velocidad
@@ -43,8 +50,7 @@ func _physics_process(_delta):
 	if presionar:
 		pedir_presion()
 	elif Gamehandler.Presiones == contador:
-		timer.connect("timeout", self, "final_anim")
-		timer.start()
+		final_timer.start()
 		duracion = 1
 	else:
 		lblpresion.visible = false
@@ -54,6 +60,7 @@ func pedir_presion():
 	lblpresion.visible = true
 	if Input.is_action_pressed("ui_accept"):
 		contador = contador + 1
+		giro = false
 		presionar = false
 		lblCont.text = "Presiones: " + String(contador)
 	else:
@@ -84,6 +91,10 @@ func animar():
 func bar_animation():
 	if giro:
 		Barra.value = Barra.value + 1
+		if Gamehandler.Dificultad == "Dificil":
+			Barra.value = Barra.value + 1
+		if Gamehandler.Dificultad == "Imposible":
+			Barra.value = Barra.value + 4
 		if Barra.value == 100:
 			giro = false
 		elif Barra.value == Gamehandler.Histeresis:
@@ -112,3 +123,8 @@ func final_anim():
 	if Velocidad <= 0:
 		Velocidad = 0
 
+func Calculo_tiempos():
+	if Gamehandler.Dificultad == "Facil" or Gamehandler.Dificultad == "Dificil":
+		duracion = 0.025
+	else:
+		duracion = 0.005
