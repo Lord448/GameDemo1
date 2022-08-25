@@ -78,16 +78,16 @@ func pedir_presion():
 func animar():
 	if direccion.x<0:
 		$AnimatedSprite.flip_h=true
-		$AnimatedSprite.play("caminar")
+		$AnimatedSprite.play(Gamehandler.personaje)
 		$AnimatedSprite.playing = true
 
 	if direccion.x>0:
 		$AnimatedSprite.flip_h=false
-		$AnimatedSprite.play("caminar")
+		$AnimatedSprite.play(Gamehandler.personaje)
 		$AnimatedSprite.playing = true
 
 	if direccion.x==0:
-		$AnimatedSprite.play("caminar")
+		$AnimatedSprite.play(Gamehandler.personaje)
 		$AnimatedSprite.playing = false
 
 func bar_animation():
