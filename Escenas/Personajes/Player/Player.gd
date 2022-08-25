@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 #Others
-var contador: int = 0
+var contador: int = 0 
 #Onready nodes
 onready var lblCont: Label = $Contador
 onready var lblpresion: Label = $Presion
@@ -19,7 +19,7 @@ var timer = Timer.new()
 var timer_restore = Timer.new()
 var final_timer = Timer.new()
 var duracion
-var delay_time = 3
+var delay_time = 5
 #Booleans
 var aparece: bool = false
 var presionar: bool = false
@@ -38,13 +38,13 @@ func _ready():
 	timer.start()
 	#Second timer
 	add_child(timer_restore)
-	timer_restore.set_one_shot(false)
-	timer_restore.set_wait_time(0.005)
+	timer_restore.set_one_shot(true)
+	timer_restore.set_wait_time(delay_time)
 	timer_restore.connect("timeout", self, "restore_vel")
 	#Third timer
 	add_child(final_timer)
-	final_timer.set_one_shot(true)
-	final_timer.set_wait_time(delay_time)
+	final_timer.set_one_shot(false)
+	final_timer.set_wait_time(0.005)
 	final_timer.connect("timeout", self, "final_anim")
 
 func _physics_process(_delta):
@@ -111,6 +111,8 @@ func restore_vel():
 		Velocidad = Gamehandler.Velocidad
 	else:
 		Velocidad += 100
+		if Velocidad >= Gamehandler.Velocidad:
+			Velocidad = Gamehandler.Velocidad
 
 func final_anim():
 	lblCont.visible = false

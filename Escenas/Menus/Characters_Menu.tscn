@@ -15,8 +15,9 @@
 [ext_resource path="res://Sprites/Female Sprites/Girl_front_pressed.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Female Sprites/Girl_front.png" type="Texture" id=14]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Link Sprites/Boy_front_pressed.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Link Sprites/Boy_front.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Boy_Sprites/Boy_front_pressed.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Boy_Sprites/Boy_front.png" type="Texture" id=17]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
