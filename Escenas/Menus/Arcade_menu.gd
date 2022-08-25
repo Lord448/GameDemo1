@@ -77,10 +77,12 @@ func _on_Aceptar_pressed():
 		Gamehandler.Velocidad = int($Velocidad/LineEditVel.text)*100
 		Gamehandler.Presiones = int($Presiones/LineEditPre.text)
 		Gamehandler.Dificultad = $Dificultad/LineEditDif.text
-		get_tree().change_scene("res://Escenas/Menus/Characters_Menu.tscn")
+		if get_tree().change_scene("res://Escenas/Menus/Characters_Menu.tscn") != OK:
+			print("Ha ocurrido un error inesperado al cargar la escena")
 
 func _on_Regresar_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")
+	if get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn") != OK:
+		print("Ha ocurrido un error inesperado al cargar la escena")
 
 
 

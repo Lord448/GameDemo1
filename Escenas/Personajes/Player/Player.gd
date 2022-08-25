@@ -129,7 +129,8 @@ func final_anim():
 		Velocidad = 0
 		salir.visible = true
 		if Input.is_action_pressed("ui_accept"):
-			get_tree().change_scene("res://Escenas/Menus/Main_Menu.tscn")
+			if get_tree().change_scene("res://Escenas/Menus/Main_Menu.tscn") != OK:
+				print("Ha ocurrido un error inesperado al cargar la escena")
 	timer.stop()
 	timer_restore.stop()
 
