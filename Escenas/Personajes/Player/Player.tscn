@@ -15,7 +15,7 @@
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=13]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 36.5, 118.625 )
+extents = Vector2( 58.5, 121 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -42,7 +42,7 @@ position = Vector2( 0, -302 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 416.5, 431.625 )
+position = Vector2( 405.5, 434 )
 shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -87,3 +87,11 @@ margin_right = 421.0
 margin_bottom = 208.0
 custom_fonts/font = SubResource( 6 )
 text = "Ganaste!!"
+
+[node name="Salir" type="Label" parent="."]
+margin_left = -103.0
+margin_top = 409.0
+margin_right = 253.0
+margin_bottom = 453.0
+custom_fonts/font = SubResource( 4 )
+text = "Presiona para salir"

@@ -1,12 +1,16 @@
 extends KinematicBody2D
 
 #Others
+var contador: int = 0
+
+#Onready nodes
 onready var lblCont: Label = $Contador
 onready var lblpresion: Label = $Presion
 onready var Barra: ProgressBar = $ProgressBar
 onready var camara: Camera2D = $Camera2D
 onready var victoria: Label = $Victoria
-var contador: int = 0
+onready var salir: Label = $Salir
+
 #Physics
 var limite
 var direccion = Vector2(0,0)
@@ -17,13 +21,14 @@ var timer = Timer.new()
 var timer_restore = Timer.new()
 var final_timer = Timer.new()
 var duracion
-var delay_time = 5
+var delay_time = 3
 #Booleans
 var aparece: bool = false
 var presionar: bool = false
 var giro: bool = true
 
 func _ready():
+	salir.visible = false
 	victoria.visible = false
 	limite=get_viewport_rect().size
 	Calculo_tiempos()
@@ -35,8 +40,8 @@ func _ready():
 	timer.start()
 	#Second timer
 	add_child(timer_restore)
-	timer_restore.set_one_shot(true)
-	timer_restore.set_wait_time(delay_time)
+	timer_restore.set_one_shot(false)
+	timer_restore.set_wait_time(0.005)
 	timer_restore.connect("timeout", self, "restore_vel")
 	#Third timer
 	add_child(final_timer)
@@ -50,8 +55,7 @@ func _physics_process(_delta):
 	if presionar:
 		pedir_presion()
 	elif Gamehandler.Presiones == contador:
-		final_timer.start()
-		duracion = 1
+		final_anim()
 	else:
 		lblpresion.visible = false
 	animar()
@@ -117,11 +121,16 @@ func final_anim():
 	victoria.visible = true
 	camara.current = false
 	victoria.margin_left -= 5 #384
-	if victoria.margin_left <= 194:
-		victoria.margin_left = 194
-	Velocidad -= 10
+	if victoria.margin_left <= 140:
+		victoria.margin_left = 140
+	Velocidad -= 8
 	if Velocidad <= 0:
 		Velocidad = 0
+		salir.visible = true
+		if Input.is_action_pressed("ui_accept"):
+			get_tree().change_scene("res://Escenas/Menus/Main_Menu.tscn")
+	timer.stop()
+	timer_restore.stop()
 
 func Calculo_tiempos():
 	if Gamehandler.Dificultad == "Facil" or Gamehandler.Dificultad == "Dificil":
