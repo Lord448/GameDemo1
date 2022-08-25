@@ -4,7 +4,6 @@ var direccion = Vector2(0,0)
 var avanzar = true
 
 func _physics_process(delta):
-	
 	if avanzar == true:
 		direccion.x = 100
 		$AnimatedSprite.flip_h = false

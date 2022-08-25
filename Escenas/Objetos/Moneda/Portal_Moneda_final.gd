@@ -18,6 +18,8 @@ func _ready():
 
 func _on_Portal_Moneda_final_body_entered(body):
 	if body.name == "Player":
-		get_tree().change_scene("res://Escenas/Niveles/Congrats.tscn")
+		if get_tree().change_scene("res://Escenas/Niveles/Congrats.tscn") != OK:
+			print("Ha ocurrido un error inesperado al cargar la escena")
 	if body.name == "Girl_Player":
-		get_tree().change_scene("res://Escenas/Niveles/Congrats.tscn")
+		if get_tree().change_scene("res://Escenas/Niveles/Congrats.tscn") != OK:
+			print("Ha ocurrido un error inesperado al cargar la escena")

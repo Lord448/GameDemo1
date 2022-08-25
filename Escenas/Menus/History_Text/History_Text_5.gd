@@ -2,8 +2,9 @@ extends Node2D
 
 
 func _on_Siguiente_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Instrucciones.tscn")
-
+	if get_tree().change_scene("res://Escenas/Menus/Instrucciones.tscn") != OK:
+		print("Ha ocurrido un error inesperado al cargar la escena")
 
 func _on_Atras_pressed():
-	get_tree().change_scene("res://Escenas/Menus/History_Text/History_Text_4.tscn")
+	if get_tree().change_scene("res://Escenas/Menus/History_Text/History_Text_4.tscn") != OK:
+		print("Ha ocurrido un error inesperado al cargar la escena")

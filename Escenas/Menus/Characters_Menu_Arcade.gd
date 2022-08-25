@@ -19,18 +19,22 @@ func _on_Aceptar_pressed():
 		$Advertencia.visible = true
 	else:
 		if Gamehandler.modo == "Arcade":
-			get_tree().change_scene("res://Escenas/Menus/Stage_menu.tscn")
+			if get_tree().change_scene("res://Escenas/Menus/Stage_menu.tscn") != OK:
+				print("Ha ocurrido un error inesperado al cargar la escena")
 		elif Gamehandler.modo == "Historia":
-			get_tree().change_scene("res://Escenas/Niveles/Level.tscn")
+			if get_tree().change_scene("res://Escenas/Niveles/Level.tscn") != OK:
+				print("Ha ocurrido un error inesperado al cargar la escena")
 		else:
 			pass
 		
 
 func _on_Regresar_pressed():
 	if Gamehandler.modo == "Arcade":
-		get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn")
+		if get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn") != OK:
+			print("Ha ocurrido un error inesperado al cargar la escena")
 	elif Gamehandler.modo == "Historia":
-		get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")
+		if get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn") != OK:
+			print("Ha ocurrido un error inesperado al cargar la escena")
 	else:
 		pass
 	

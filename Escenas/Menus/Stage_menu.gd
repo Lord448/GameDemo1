@@ -10,10 +10,12 @@ func _on_Aceptar_pressed():
 	if Gamehandler.Stage == "":
 		$Advertencia.visible = true
 	else:
-		get_tree().change_scene(Gamehandler.Stage)
+		if get_tree().change_scene(Gamehandler.Stage) != OK:
+			print("Ha ocurrido un error inesperado al cargar la escena")
 
 func _on_Regresar_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Characters_Menu_Arcade.tscn")
+	if get_tree().change_scene("res://Escenas/Menus/Characters_Menu_Arcade.tscn") != OK:
+		print("Ha ocurrido un error inesperado al cargar la escena")
 
 func _on_Stage_1_pressed():
 	$Advertencia.visible = false
