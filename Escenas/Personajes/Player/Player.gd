@@ -9,6 +9,7 @@ onready var Barra: ProgressBar = $ProgressBar
 onready var camara: Camera2D = $Camera2D
 onready var victoria: Label = $Victoria
 onready var salir: Label = $Salir
+onready var personaje: String = Gamehandler.personaje
 #Physics
 var limite
 var direccion = Vector2(0,0)
