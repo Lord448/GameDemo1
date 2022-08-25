@@ -12,12 +12,11 @@
 [ext_resource path="res://Tiles/Tile_03.png" type="Texture" id=10]
 [ext_resource path="res://Tiles/Tile_11.png" type="Texture" id=11]
 [ext_resource path="res://Tiles/Tile_12.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Female Sprites/Girl_front_pressed.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Female Sprites/Girl_front.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Female_Sprites/Girl_front.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Female_Sprites/Girl_front_pressed.png" type="Texture" id=14]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-1.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Boy_Sprites/Boy_front_pressed.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/Boy_Sprites/Boy_front.png" type="Texture" id=17]
-
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tile_01.png 0"
@@ -243,8 +242,8 @@ margin_left = -300.498
 margin_top = -140.0
 margin_right = -165.498
 margin_bottom = 142.0
-texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 13 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
 expand = true
 
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
