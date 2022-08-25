@@ -14,7 +14,7 @@ func _on_Aceptar_pressed():
 			print("Ha ocurrido un error inesperado al cargar la escena")
 
 func _on_Regresar_pressed():
-	if get_tree().change_scene("res://Escenas/Menus/Characters_Menu_Arcade.tscn") != OK:
+	if get_tree().change_scene("res://Escenas/Menus/Characters_Menu.tscn") != OK:
 		print("Ha ocurrido un error inesperado al cargar la escena")
 
 func _on_Stage_1_pressed():

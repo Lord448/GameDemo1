@@ -1,6 +1,6 @@
 extends Node2D
 
-func _on_Characters_Menu_Arcade_ready():
+func _on_Characters_Menu_ready():
 	$Advertencia.visible = false
 	Gamehandler.personaje = ""
 
