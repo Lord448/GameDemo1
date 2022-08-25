@@ -18,7 +18,19 @@ func _on_Aceptar_pressed():
 	if Gamehandler.personaje == "":
 		$Advertencia.visible = true
 	else:
-		get_tree().change_scene("res://Escenas/Menus/Stage_menu.tscn")
+		if Gamehandler.modo == "Arcade":
+			get_tree().change_scene("res://Escenas/Menus/Stage_menu.tscn")
+		elif Gamehandler.modo == "Historia":
+			get_tree().change_scene("res://Escenas/Niveles/Level.tscn")
+		else:
+			pass
+		
 
 func _on_Regresar_pressed():
-	get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn")
+	if Gamehandler.modo == "Arcade":
+		get_tree().change_scene("res://Escenas/Menus/Arcade_menu.tscn")
+	elif Gamehandler.modo == "Historia":
+		get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn")
+	else:
+		pass
+	

@@ -8,6 +8,7 @@ var player: Node2D
 var Histeresis: int = 70
 var Dificultad: String = "Facil"
 var personaje: String = "boy"
+var modo: String = "Arcade"
 
 func _ready():
 	pass
