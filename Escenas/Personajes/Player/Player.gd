@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 #Others
 var contador: int = 0
-
 #Onready nodes
 onready var lblCont: Label = $Contador
 onready var lblpresion: Label = $Presion
@@ -10,7 +9,6 @@ onready var Barra: ProgressBar = $ProgressBar
 onready var camara: Camera2D = $Camera2D
 onready var victoria: Label = $Victoria
 onready var salir: Label = $Salir
-
 #Physics
 var limite
 var direccion = Vector2(0,0)

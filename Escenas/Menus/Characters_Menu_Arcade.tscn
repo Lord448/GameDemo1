@@ -283,5 +283,4 @@ text = "Selecciona uno!"
 [connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
 [connection signal="pressed" from="Aceptar" to="." method="_on_Aceptar_pressed"]
 [connection signal="pressed" from="Control/Boy Player" to="." method="_on_Boy_Player_pressed"]
-[connection signal="toggled" from="Control/Boy Player" to="." method="_on_Boy_Player_toggled"]
 [connection signal="pressed" from="Control/Girl Player" to="." method="_on_Girl_Player_pressed"]
