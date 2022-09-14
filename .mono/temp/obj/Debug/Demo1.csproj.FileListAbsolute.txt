@@ -7,3 +7,12 @@ D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1
 D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.csproj.CoreCompileInputs.cache
 D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.dll
 D:\Usuarios\Pedro\Escritorio\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.pdb
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\bin\Debug\Demo1.dll
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\bin\Debug\Demo1.pdb
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.csproj.AssemblyReference.cache
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.AssemblyInfoInputs.cache
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.AssemblyInfo.cs
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.dll
+C:\Users\pedro\Desktop\TEC\ServicioSocial\Demo1\.mono\temp\obj\Debug\Demo1.pdb
