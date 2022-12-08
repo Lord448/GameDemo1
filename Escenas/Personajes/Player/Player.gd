@@ -77,19 +77,20 @@ func pedir_presion():
 			pass
 
 func animar():
-	if direccion.x<0:
-		$AnimatedSprite.flip_h=true
-		$AnimatedSprite.play(Gamehandler.personaje)
-		$AnimatedSprite.playing = true
+	
+		if direccion.x<0:
+			$AnimatedSprite.flip_h=true
+			$AnimatedSprite.play(Gamehandler.personaje)
+			$AnimatedSprite.playing = true
 
-	if direccion.x>0:
-		$AnimatedSprite.flip_h=false
-		$AnimatedSprite.play(Gamehandler.personaje)
-		$AnimatedSprite.playing = true
+		if direccion.x>0:
+			$AnimatedSprite.flip_h=false
+			$AnimatedSprite.play(Gamehandler.personaje)
+			$AnimatedSprite.playing = true
 
-	if direccion.x==0:
-		$AnimatedSprite.play(Gamehandler.personaje)
-		$AnimatedSprite.playing = false
+		if direccion.x==0:
+			$AnimatedSprite.play(Gamehandler.personaje)
+			$AnimatedSprite.playing = false
 
 func bar_animation():
 	if giro:
@@ -129,7 +130,7 @@ func final_anim():
 		Velocidad = 0
 		salir.visible = true
 		if Input.is_action_pressed("ui_accept"):
-			if get_tree().change_scene("res://Escenas/Menus/Main_Menu.tscn") != OK:
+			if get_tree().change_scene("res://Escenas/Menus/Modals_Menu.tscn") != OK:
 				print("Ha ocurrido un error inesperado al cargar la escena")
 	timer.stop()
 	timer_restore.stop()
@@ -139,3 +140,5 @@ func Calculo_tiempos():
 		duracion = 0.025
 	else:
 		duracion = 0.005
+	
+
