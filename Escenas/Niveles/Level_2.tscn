@@ -25,9 +25,10 @@ font_data = ExtResource( 10 )
 script = SubResource( 2 )
 
 [node name="Moneda_2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 858, -87 )
+position = Vector2( 754, -97 )
 
 [node name="Dragon_2" parent="." instance=ExtResource( 6 )]
+visible = false
 position = Vector2( 187, 237 )
 
 [node name="Parallax" type="Node2D" parent="."]
@@ -91,7 +92,7 @@ centered = false
 script = ExtResource( 5 )
 
 [node name="position_player" type="Position2D" parent="Player Selected"]
-position = Vector2( 479, 193 )
+position = Vector2( 96, 195 )
 
 [node name="Label_Level_2" type="Label" parent="."]
 margin_left = 467.0

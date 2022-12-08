@@ -20,9 +20,14 @@ font_data = ExtResource( 10 )
 position = Vector2( 852, -84 )
 
 [node name="Dragon" parent="." instance=ExtResource( 7 )]
+visible = false
 position = Vector2( 76, -170 )
 
 [node name="Parallax" type="Node2D" parent="."]
+position = Vector2( -1, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
 
@@ -98,12 +103,12 @@ centered = false
 script = ExtResource( 8 )
 
 [node name="position_player" type="Position2D" parent="Player Selected"]
-position = Vector2( 479, 193 )
+position = Vector2( 87, 150 )
 
 [node name="Label_Level_1" type="Label" parent="."]
-margin_left = 459.0
-margin_top = -228.0
-margin_right = 776.0
-margin_bottom = -160.0
+margin_left = 465.0
+margin_top = -229.0
+margin_right = 782.0
+margin_bottom = -161.0
 custom_fonts/font = SubResource( 1 )
 text = "Level 1"

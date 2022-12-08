@@ -6,7 +6,7 @@ var avanzar = true
 func _physics_process(delta):
 	
 	if avanzar == true:
-		direccion.x = 180
+		direccion.x = 485
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.play("girar")
 	else:

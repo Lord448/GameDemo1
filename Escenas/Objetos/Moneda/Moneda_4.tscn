@@ -24,9 +24,6 @@ animations = [ {
 [node name="Moneda_4" type="KinematicBody2D" parent="."]
 position = Vector2( 107, 319 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda_4"]
 position = Vector2( -2, -1 )
@@ -39,5 +36,5 @@ frames = SubResource( 2 )
 animation = "girar"
 
 [node name="Portal_Moneda" parent="Moneda_4" instance=ExtResource( 1 )]
-position = Vector2( -14, -4 )
+position = Vector2( -19, -4 )
 escena = "Level_5"

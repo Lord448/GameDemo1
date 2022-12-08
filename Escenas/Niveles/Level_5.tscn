@@ -29,6 +29,7 @@ script = SubResource( 2 )
 position = Vector2( 858, -96 )
 
 [node name="Dragon_5" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 179, 279 )
 
 [node name="Parallax" type="Node2D" parent="."]
@@ -99,7 +100,7 @@ centered = false
 script = ExtResource( 4 )
 
 [node name="position_player" type="Position2D" parent="Player Selected"]
-position = Vector2( 479, 193 )
+position = Vector2( 78, 189 )
 
 [node name="Label_Level_5" type="Label" parent="."]
 margin_left = 451.0

@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/banderines.png" type="Texture" id=1]
-[ext_resource path="res://Escenas/Niveles/Player Selected.gd" type="Script" id=2]
 [ext_resource path="res://Escenas/Objetos/Portales/Portales.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Paisajes/Naturista/Naturista_5/full-bg.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/JungleAdventurer.otf" type="DynamicFontData" id=5]
@@ -16,6 +15,14 @@ script/source = "extends Node2D
 
 func _ready():
 	pass # Replace with function body.
+
+
+func _on_Menu_principal_pressed():
+	get_tree().change_scene(\"res://Escenas/Menus/Main_Menu.tscn\")
+
+
+func _on_Salir_pressed():
+	get_tree().quit()
 "
 
 [sub_resource type="DynamicFont" id=4]
@@ -29,18 +36,14 @@ size = 40
 outline_size = 4
 font_data = ExtResource( 12 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 22
+[sub_resource type="DynamicFont" id=8]
+size = 26
 outline_size = 3
+outline_color = Color( 0.0313726, 0.027451, 0.027451, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=6]
-size = 28
-outline_size = 3
-outline_color = Color( 0.0235294, 0.0235294, 0.0235294, 1 )
-font_data = ExtResource( 8 )
-
-[node name="Level" type="Node2D"]
+[node name="Congrats" type="Node2D"]
+position = Vector2( 0, 303 )
 script = SubResource( 2 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
@@ -50,7 +53,7 @@ motion_scale = Vector2( 0.4, 0 )
 motion_mirroring = Vector2( 1023, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
-position = Vector2( 0, -303 )
+position = Vector2( 4, -4 )
 scale = Vector2( 0.333659, 0.40625 )
 texture = ExtResource( 4 )
 centered = false
@@ -91,38 +94,37 @@ custom_fonts/normal_font = SubResource( 7 )
 text = "Haz llegado a casa..."
 
 [node name="Flecha_1" type="Sprite" parent="."]
-position = Vector2( 718, 180 )
-scale = Vector2( 0.375, 0.32872 )
+position = Vector2( 719, 155 )
+scale = Vector2( 0.567187, 0.50346 )
 texture = ExtResource( 7 )
 
 [node name="Flecha_2" type="Sprite" parent="."]
-position = Vector2( 306, 166 )
-scale = Vector2( 0.401172, 0.434256 )
+position = Vector2( 370.906, 155 )
+scale = Vector2( 0.603418, 0.509516 )
 texture = ExtResource( 7 )
 flip_h = true
 
-[node name="Label_MainMenu" type="Label" parent="."]
-margin_left = 249.964
-margin_top = 107.04
-margin_right = 366.964
-margin_bottom = 158.04
-custom_colors/font_color = Color( 0.976471, 0.968627, 0.980392, 1 )
-custom_colors/font_outline_modulate = Color( 0.0509804, 0.0470588, 0.0470588, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "Menu
-Principal "
-align = 1
+[node name="Menu_principal" type="Button" parent="."]
+margin_left = 257.0
+margin_top = 92.0
+margin_right = 470.0
+margin_bottom = 144.0
+custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Menu Principal"
+flat = true
 
-[node name="Label_Exit" type="Label" parent="."]
-margin_left = 677.0
-margin_top = 140.0
-margin_right = 777.0
-margin_bottom = 178.0
-custom_fonts/font = SubResource( 6 )
+[node name="Salir" type="Button" parent="."]
+margin_left = 623.0
+margin_top = 99.0
+margin_right = 795.0
+margin_bottom = 142.0
+custom_colors/font_color_focus = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_colors/font_color_hover = Color( 0.603922, 0.231373, 0.231373, 1 )
+custom_fonts/font = SubResource( 8 )
 text = "Salir"
+flat = true
 
-[node name="Player Selected" type="Node2D" parent="."]
-script = ExtResource( 2 )
-
-[node name="position_player" type="Position2D" parent="Player Selected"]
-position = Vector2( 480, 185 )
+[connection signal="pressed" from="Menu_principal" to="." method="_on_Menu_principal_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
